@@ -37,6 +37,9 @@ public class Testing : MonoBehaviour
                 logText.color = color1;
             
             logText.text = "A";
+            OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+            IEnumerator coroutine = DisableVibration(0.5f);
+            StartCoroutine(coroutine);
         }
 
         // returns true if the “X” button was released this frame.
@@ -87,5 +90,11 @@ public class Testing : MonoBehaviour
         // returns true if the secondary gamepad button, typically “B”, is currently touched by the user.
         if(OVRInput.Get(OVRInput.Touch.Two))
             logText.text = "B";
+    }
+
+    private IEnumerator DisableVibration(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
     }
 }
