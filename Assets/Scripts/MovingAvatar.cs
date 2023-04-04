@@ -10,8 +10,9 @@ public class MovingAvatar : MonoBehaviour
     private AvatarCustomization _avatar;
     private int currentWayPointIndex;
     private float pauseTime;
+    private bool inWayPoint;
 
-    [SerializeField] private bool inWayPoint;
+    private bool hasMovement = false;
 
     [SerializeField] private Transform [] wayPoints;
     [SerializeField][Range(0.5f, 10f)] private float minStopDuration = 0.5f;
@@ -20,27 +21,36 @@ public class MovingAvatar : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        _navMeshAgent = GetComponent<NavMeshAgent>();
+    {        
+        hasMovement = wayPoints.Length > 1;        
+
         _avatar = GetComponent<AvatarCustomization>();
-        currentWayPointIndex = 0;
-        _navMeshAgent.SetDestination(wayPoints[currentWayPointIndex].position);
-        _avatar.Animator.SetFloat("MoveY", 1f);
-        Debug.Log(_avatar.Animator.GetFloat("MoveY"));
+
+        if(hasMovement)
+        {
+            _navMeshAgent = GetComponent<NavMeshAgent>();        
+            currentWayPointIndex = 0;         
+            StartCoroutine("NextMove");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!inWayPoint && _navMeshAgent.remainingDistance < _navMeshAgent.stoppingDistance)
+        if(hasMovement)
         {
-            inWayPoint = true;            
-            pauseTime = Random.Range(minStopDuration, maxStopDuration);
-            currentWayPointIndex = Random.Range(0, wayPoints.Length - 1) % wayPoints.Length;
+            if(!inWayPoint && _navMeshAgent.remainingDistance < _navMeshAgent.stoppingDistance)
+            {
+                inWayPoint = true;    
+                  
+                pauseTime = Random.Range(minStopDuration, maxStopDuration);
+                currentWayPointIndex = Random.Range(0, wayPoints.Length - 1) % wayPoints.Length;
             
-            Debug.Log(string.Format("Tiempo de espera: {0}\nPróximo way point: {1}", pauseTime, currentWayPointIndex));
-            StartCoroutine("NextMove");
+                //Debug.Log(string.Format("Tiempo de espera: {0}\nPróximo way point: {1}", pauseTime, currentWayPointIndex));
+                StartCoroutine("NextMove");
+            }
         }
+        
     }
 
     private void LateUpdate() {
@@ -49,14 +59,19 @@ public class MovingAvatar : MonoBehaviour
 
     private IEnumerator NextMove()
     {        
-        yield return new WaitForSeconds(pauseTime);        
+        yield return new WaitForSeconds(pauseTime);
+               
         _navMeshAgent.SetDestination(wayPoints[currentWayPointIndex].position);
         inWayPoint = false;                
     }
 
     private void ControlAnimations()
     {
-        float newValueMoveY = inWayPoint ? 0f : 1f;
-        _avatar.Animator.SetFloat("MoveY", newValueMoveY);
+        if(hasMovement)
+        {
+            //Debug.Log(string.Format("Velocidad: {0}", _navMeshAgent.velocity.sqrMagnitude));
+            float newValueMoveY = _navMeshAgent.velocity.sqrMagnitude < 0.5f ? 0f : 1f;
+            _avatar.Animator.SetFloat("MoveY", newValueMoveY);
+        }
     }
 }

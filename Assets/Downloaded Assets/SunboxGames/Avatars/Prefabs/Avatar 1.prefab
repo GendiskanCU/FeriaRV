@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 558158365799373877}
   - component: {fileID: 558158365799373876}
   m_Layer: 0
-  m_Name: Avatar
+  m_Name: Avatar 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   MaleBodyGEO: {fileID: 7123670064525194315}
   FemaleBodyGEO: {fileID: 7126864611683721765}
   AvatarReferences: {fileID: 11400000, guid: 64fdaf6301ddadf4984fbd23b73c1671, type: 2}
-  CurrentGender: 1
+  CurrentGender: 0
   BodyFat: -62.6
   BodyMuscle: 18.72731
   BodyHeight: 1.8
@@ -1185,7 +1185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &14710841417258645
 Transform:
   m_ObjectHideFlags: 0
