@@ -9,7 +9,9 @@ public class MovingAvatar : MonoBehaviour
     private NavMeshAgent _navMeshAgent;
     private AvatarCustomization _avatar;
     private int currentWayPointIndex;
-    private float pauseTime;
+    private float pauseWalkTime;
+
+    private float pauseGreetingTime;
     private bool inWayPoint;
 
     private bool hasMovement = false;
@@ -17,6 +19,11 @@ public class MovingAvatar : MonoBehaviour
     [SerializeField] private Transform [] wayPoints;
     [SerializeField][Range(0.5f, 10f)] private float minStopDuration = 0.5f;
     [SerializeField][Range(10.5f, 30f)] private float maxStopDuration = 15f;
+
+
+    [SerializeField] private bool greetingOn;
+    [SerializeField][Range(5f, 15f)] private float minTimeBetweenGreetings = 5.0f;
+    [SerializeField][Range(20f, 60f)] private float maxTimeBetweenGreetings = 20.0f;
     
 
     // Start is called before the first frame update
@@ -32,6 +39,12 @@ public class MovingAvatar : MonoBehaviour
             currentWayPointIndex = 0;         
             StartCoroutine("NextMove");
         }
+
+        if(greetingOn)
+        {
+            pauseGreetingTime = Random.Range(minTimeBetweenGreetings, maxTimeBetweenGreetings);
+            StartCoroutine("SayHello");
+        }
     }
 
     // Update is called once per frame
@@ -43,10 +56,10 @@ public class MovingAvatar : MonoBehaviour
             {
                 inWayPoint = true;    
                   
-                pauseTime = Random.Range(minStopDuration, maxStopDuration);
+                pauseWalkTime = Random.Range(minStopDuration, maxStopDuration);
                 currentWayPointIndex = Random.Range(0, wayPoints.Length - 1) % wayPoints.Length;
             
-                //Debug.Log(string.Format("Tiempo de espera: {0}\nPróximo way point: {1}", pauseTime, currentWayPointIndex));
+                //Debug.Log(string.Format("Tiempo de espera: {0}\nPróximo way point: {1}", pauseWalkTime, currentWayPointIndex));
                 StartCoroutine("NextMove");
             }
         }
@@ -54,18 +67,30 @@ public class MovingAvatar : MonoBehaviour
     }
 
     private void LateUpdate() {
-        ControlAnimations();
+        ControlWalkAnimations();
     }
 
     private IEnumerator NextMove()
     {        
-        yield return new WaitForSeconds(pauseTime);
+        yield return new WaitForSeconds(pauseWalkTime);
                
         _navMeshAgent.SetDestination(wayPoints[currentWayPointIndex].position);
         inWayPoint = false;                
     }
 
-    private void ControlAnimations()
+    private IEnumerator SayHello()
+    {
+        while(greetingOn)
+        {            
+            yield return new WaitForSeconds(pauseGreetingTime);
+            _avatar.Animator.SetTrigger("Wave");
+            yield return new WaitForSeconds(4f);            
+            _avatar.Animator.ResetTrigger("Wave");            
+            pauseGreetingTime = Random.Range(minTimeBetweenGreetings, maxTimeBetweenGreetings);
+        }
+    }
+
+    private void ControlWalkAnimations()
     {
         if(hasMovement)
         {
