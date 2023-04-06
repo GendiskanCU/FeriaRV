@@ -4998,19 +4998,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a92dc4707f1d5e44b032732329993ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  wayPoints: []
   minStopDuration: 0.5
   maxStopDuration: 15
+  greetingOn: 0
+  minTimeBetweenGreetings: 5
+  maxTimeBetweenGreetings: 20
 --- !u!195 &8310517596280860562
 NavMeshAgent:
   m_ObjectHideFlags: 0
