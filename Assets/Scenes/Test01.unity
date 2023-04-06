@@ -1175,26 +1175,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 514585152203390327, guid: 77b975b21c6e30a4bb1f6590c3861906, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 99cd563f5fc52854ba4badda9946141a, type: 2}
-    - target: {fileID: 702100946171138073, guid: 77b975b21c6e30a4bb1f6590c3861906, type: 3}
-      propertyPath: m_snapOffset
-      value: 
-      objectReference: {fileID: 1592537046539363735, guid: cf332ddf28944014e9349e03e42dd7cc, type: 3}
-    - target: {fileID: 1699213587049834340, guid: 77b975b21c6e30a4bb1f6590c3861906, type: 3}
-      propertyPath: m_Name
-      value: ShootPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699213587049834341, guid: 77b975b21c6e30a4bb1f6590c3861906, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699213587049834341, guid: 77b975b21c6e30a4bb1f6590c3861906, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.864
-      objectReference: {fileID: 0}
     - target: {fileID: 4363463078160995883, guid: 77b975b21c6e30a4bb1f6590c3861906, type: 3}
       propertyPath: m_Name
       value: BallGun
@@ -1245,31 +1225,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b975b21c6e30a4bb1f6590c3861906, type: 3}
---- !u!1 &6874306907783137580 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4363463078160995883, guid: 77b975b21c6e30a4bb1f6590c3861906, type: 3}
-  m_PrefabInstance: {fileID: 6874306907783137579}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6874306907783137581 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1699213587049834341, guid: 77b975b21c6e30a4bb1f6590c3861906, type: 3}
-  m_PrefabInstance: {fileID: 6874306907783137579}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6874306907783137582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6874306907783137580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e51a1c109eae3e845b16a7e5b2d17e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ball: {fileID: 5633612507145569562, guid: eb46bbe1649267343be0ac8a67023589, type: 3}
-  shootForce: 600
-  shootPoint: {fileID: 6874306907783137581}
 --- !u!1001 &7478596600982948168
 PrefabInstance:
   m_ObjectHideFlags: 0

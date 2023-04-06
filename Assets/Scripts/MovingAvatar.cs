@@ -10,8 +10,9 @@ public class MovingAvatar : MonoBehaviour
     private AvatarCustomization _avatar;
     private int currentWayPointIndex;
     private float pauseWalkTime;
-
     private float pauseGreetingTime;
+    private float pauseClapTime;
+    private float pauseDanceTime;
     private bool inWayPoint;
 
     private bool hasMovement = false;
@@ -24,6 +25,17 @@ public class MovingAvatar : MonoBehaviour
     [SerializeField] private bool greetingOn;
     [SerializeField][Range(5f, 15f)] private float minTimeBetweenGreetings = 5.0f;
     [SerializeField][Range(20f, 60f)] private float maxTimeBetweenGreetings = 20.0f;
+
+
+    [SerializeField] private bool clapOn;
+    [SerializeField][Range(2f, 5f)] private float minTimeBetweenApplauses = 3.0f;
+    [SerializeField][Range(6f, 10f)] private float maxTimeBetweenApplauses = 10.0f;
+
+
+    [SerializeField] private bool danceOn;
+    [SerializeField][Range(1f, 5f)] private float minTimeBetweenDances = 2.0f;
+    [SerializeField][Range(6f, 10f)] private float maxTimeBetweenDances = 7.0f;
+
     
 
     // Start is called before the first frame update
@@ -44,6 +56,18 @@ public class MovingAvatar : MonoBehaviour
         {
             pauseGreetingTime = Random.Range(minTimeBetweenGreetings, maxTimeBetweenGreetings);
             StartCoroutine("SayHello");
+        }
+
+        if(clapOn)
+        {
+            pauseClapTime = Random.Range(minTimeBetweenApplauses, maxTimeBetweenApplauses);
+            StartCoroutine("Clap");
+        }
+
+        if(danceOn)
+        {
+            pauseDanceTime = Random.Range(minTimeBetweenDances, maxTimeBetweenDances);
+            StartCoroutine("Dance");
         }
     }
 
@@ -87,6 +111,30 @@ public class MovingAvatar : MonoBehaviour
             yield return new WaitForSeconds(4f);            
             _avatar.Animator.ResetTrigger("Wave");            
             pauseGreetingTime = Random.Range(minTimeBetweenGreetings, maxTimeBetweenGreetings);
+        }
+    }
+
+    private IEnumerator Clap()
+    {
+        while(clapOn)
+        {            
+            yield return new WaitForSeconds(pauseClapTime);
+            _avatar.Animator.SetTrigger("Clap");
+            yield return new WaitForSeconds(4f);            
+            _avatar.Animator.ResetTrigger("Clap");            
+            pauseClapTime = Random.Range(minTimeBetweenApplauses, maxTimeBetweenApplauses);
+        }
+    }
+
+    private IEnumerator Dance()
+    {
+        while(danceOn)
+        {            
+            yield return new WaitForSeconds(pauseDanceTime);
+            _avatar.Animator.SetTrigger("Dance01");
+            yield return new WaitForSeconds(4f);            
+            _avatar.Animator.ResetTrigger("Dance01");            
+            pauseDanceTime = Random.Range(minTimeBetweenDances, maxTimeBetweenDances);
         }
     }
 

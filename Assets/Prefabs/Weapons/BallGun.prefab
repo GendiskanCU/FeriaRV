@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 4363463078161287691}
   - component: {fileID: 702100946171138072}
   - component: {fileID: 702100946171138073}
+  - component: {fileID: 6874306907783137582}
   m_Layer: 0
   m_Name: BallGun
   m_TagString: Untagged
@@ -417,7 +418,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4363463078160995883}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.36699995, y: 1.4289998, z: -0.3959999}
   m_LocalScale: {x: 0.15000007, y: 0.14999983, z: 0.15000007}
   m_ConstrainProportionsScale: 1
@@ -469,6 +470,21 @@ MonoBehaviour:
   - {fileID: 2027198160212250551}
   - {fileID: 2027198158695411222}
   - {fileID: 2027198159445860883}
+--- !u!114 &6874306907783137582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4363463078160995883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51a1c109eae3e845b16a7e5b2d17e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 5633612507145569562, guid: eb46bbe1649267343be0ac8a67023589, type: 3}
+  shootForce: 600
+  shootPoint: {fileID: 1699213587049834341}
 --- !u!1 &4363463078160995885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,9 +1056,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallsGun
       objectReference: {fileID: 0}
+    - target: {fileID: 5256440149432129044, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256440149432129044, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.864
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256440149432129045, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Name
+      value: ShootPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748764426193926, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99cd563f5fc52854ba4badda9946141a, type: 2}
     m_RemovedComponents:
     - {fileID: 4847135756415680061, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+--- !u!4 &1699213587049834341 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5256440149432129044, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+  m_PrefabInstance: {fileID: 6874306909866799473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1699213587935284945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5256440148559265696, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
