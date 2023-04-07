@@ -11,20 +11,7 @@ public class GameBoard : MonoBehaviour
 
     private bool gameBoardCreated;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        CreateNewGameBoard();
-    }
-
-    private void Update() {
-        if(Input.GetKeyDown("space") && gameBoardCreated)
-        {
-            RestoreBoard();
-        }
-        
-    }
-
+    
     public void GameBegins()
     {
         if(gameBoardCreated)
