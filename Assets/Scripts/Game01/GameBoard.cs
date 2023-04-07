@@ -25,6 +25,14 @@ public class GameBoard : MonoBehaviour
         
     }
 
+    public void GameBegins()
+    {
+        if(gameBoardCreated)
+            RestoreBoard();
+        else
+            CreateNewGameBoard();
+    }
+
     private void CreateNewGameBoard()
     {
         GameObject newRoll;
