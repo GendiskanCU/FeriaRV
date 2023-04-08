@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Weapon
   - Floor
-  - Dedo
+  - ButtonsPusser
   layers:
   - Default
   - TransparentFX
