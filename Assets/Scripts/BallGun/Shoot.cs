@@ -15,7 +15,7 @@ public class Shoot : MonoBehaviour
                 if(OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
                 {
                     Instantiate(ball, shootPoint.position,
-                    shootPoint.rotation).GetComponent<Rigidbody>().AddForce(shootPoint.forward * shootForce);         
+                    shootPoint.rotation).GetComponent<Rigidbody>().AddForce(shootPoint.forward * shootForce * 1.5f);         
                 }
             }
         }

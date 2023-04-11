@@ -13,8 +13,10 @@ public class ControlPosition : MonoBehaviour
         initialRotation = transform.rotation;
     }
 
+    //Si el objeto colisiona con el suelo vuelve a su posición de partida
     private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "Floor")
+        if(other.gameObject.tag == "Floor" ||
+        other.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             transform.position = initialPosition;
             transform.rotation = initialRotation;
