@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38867193, g: 0.728084, b: 0.7325924, a: 1}
+  m_IndirectSpecularColor: {r: 0.38864833, g: 0.72807086, b: 0.73258895, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3057,7 +3057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1930251640349978675, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9327335
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1930251640349978675, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3065,7 +3065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1930251640349978675, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3605666
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1930251640349978675, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3077,7 +3077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1930251640349978675, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 42.27
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1930251640349978675, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3102,7 +3102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4644586138101738844, guid: 58948fb9e7c89be43a5797115166d920, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.23
       objectReference: {fileID: 0}
     - target: {fileID: 4644586138101738844, guid: 58948fb9e7c89be43a5797115166d920, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3110,7 +3110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4644586138101738844, guid: 58948fb9e7c89be43a5797115166d920, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.88
       objectReference: {fileID: 0}
     - target: {fileID: 4644586138101738844, guid: 58948fb9e7c89be43a5797115166d920, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3143,10 +3143,6 @@ PrefabInstance:
     - target: {fileID: 4644586138101738845, guid: 58948fb9e7c89be43a5797115166d920, type: 3}
       propertyPath: m_Name
       value: GameBoard
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644586138101738845, guid: 58948fb9e7c89be43a5797115166d920, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58948fb9e7c89be43a5797115166d920, type: 3}
