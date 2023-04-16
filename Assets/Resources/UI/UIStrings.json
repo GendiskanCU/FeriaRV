@@ -1,0 +1,52 @@
+[
+	{
+		"Id": "Main",
+		"Line": "¡Bienvenid@ a la Feria Virtual!\nLa feria ha llegado a la ciudad"
+	},
+
+	{
+		"Id": "Main",
+		"Line": "Acércate a alguna de las casetas\ncon juegos para jugar a ellos"
+	},
+
+	{
+		"Id": "Main",
+		"Line": "Utiliza el joystick izquierdo\npara desplazarte por la ciudad"
+	},
+
+	{
+		"Id": "Main",
+		"Line": "Utiliza el joystick derecho\npara rotar la vista"
+	},
+
+	{
+		"Id": "Main",
+		"Line": "Pulsa en el reloj con el dedo\níndice para desactivar este panel"
+	},
+
+	{
+		"Id": "Main",
+		"Line": "Vuelve a pulsar en el rejoj\npara activarlo de nuevo"
+	},
+
+	{
+		"Id": "Main",
+		"Line": "Pulsa en los iconos de abajo\n para acceder a otras funciones:"
+	},
+
+	{
+		"Id": "Main",
+		"Line": "Ver las puntuaciones, tu inventario\n o salir de la aplicación"
+	},
+
+	{
+		"Id": "Main",
+		"Line": " "
+	},
+
+	{
+		"Id": "Other",
+		"Line": "Test"
+	}
+		
+]
