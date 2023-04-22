@@ -81,6 +81,15 @@ public class OVRGrabbable : MonoBehaviour
         get { return m_snapOffset; }
     }
 
+
+    /// <summary>
+	/// Método definido por el usuario para poder modificar la propiedad SnapOffset
+	/// </summary>
+    public void SetSnapOffset(Transform newSnapOffset)
+    {
+        m_snapOffset = newSnapOffset;
+    }
+
 	/// <summary>
 	/// Returns the OVRGrabber currently grabbing this object.
 	/// </summary>

@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - ButtonsPusser
   - DedoIndice
+  - PlayerHand
   layers:
   - Default
   - TransparentFX

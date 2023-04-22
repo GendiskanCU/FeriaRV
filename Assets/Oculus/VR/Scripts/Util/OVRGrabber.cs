@@ -418,5 +418,13 @@ public class OVRGrabber : MonoBehaviour
 			}
 		}
 	}
+
+    /// <summary>
+	/// Método definido por el usuario para poder obtener la propiedad Controller
+	/// </summary>
+    public OVRInput.Controller GetController()
+    {
+        return m_controller;
+    }
 }
 
