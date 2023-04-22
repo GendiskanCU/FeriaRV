@@ -60,31 +60,31 @@ public class GameBoard : MonoBehaviour
                 position = new Vector3(spawnPoint.position.x, spawnPoint.position.y + 0.07f, spawnPoint.position.z);
                 break;
             case 1:
-                position = new Vector3(spawnPoint.position.x + 0.11f, spawnPoint.position.y + 0.07f, spawnPoint.position.z);
+                position = new Vector3(spawnPoint.position.x + 0.165f, spawnPoint.position.y + 0.07f, spawnPoint.position.z);
                 break;
             case 2:
-                position = new Vector3(spawnPoint.position.x + 0.11f * 2, spawnPoint.position.y + 0.07f, spawnPoint.position.z);
+                position = new Vector3(spawnPoint.position.x + 0.165f * 2, spawnPoint.position.y + 0.07f, spawnPoint.position.z);
                 break;
             case 3:
-                position = new Vector3(spawnPoint.position.x + 0.11f * 3, spawnPoint.position.y + 0.07f, spawnPoint.position.z);
+                position = new Vector3(spawnPoint.position.x + 0.165f * 3, spawnPoint.position.y + 0.07f, spawnPoint.position.z);
                 break;
             case 4:
-                position = new Vector3(spawnPoint.position.x + 0.055f, spawnPoint.position.y + 0.22f, spawnPoint.position.z);
+                position = new Vector3(spawnPoint.position.x + 0.0825f, spawnPoint.position.y + 0.33f, spawnPoint.position.z);
                 break;
             case 5:
-                position = new Vector3(spawnPoint.position.x + 0.055f + 0.11f, spawnPoint.position.y + 0.22f, spawnPoint.position.z);
+                position = new Vector3(spawnPoint.position.x + 0.0825f + 0.165f, spawnPoint.position.y + 0.33f, spawnPoint.position.z);
                 break;
             case 6:
-                position = new Vector3(spawnPoint.position.x + 0.055f + 0.11f * 2, spawnPoint.position.y + 0.22f, spawnPoint.position.z);
+                position = new Vector3(spawnPoint.position.x + 0.0825f + 0.165f * 2, spawnPoint.position.y + 0.33f, spawnPoint.position.z);
                 break;
             case 7:
-                position = new Vector3(spawnPoint.position.x + 0.107f, spawnPoint.position.y + 0.37f, spawnPoint.position.z);
+                position = new Vector3(spawnPoint.position.x + 0.1605f, spawnPoint.position.y + 0.555f, spawnPoint.position.z);
                 break;
             case 8:
-                position = new Vector3(spawnPoint.position.x + 0.107f + 0.11f, spawnPoint.position.y + 0.37f, spawnPoint.position.z);
+                position = new Vector3(spawnPoint.position.x + 0.1605f + 0.165f, spawnPoint.position.y + 0.555f, spawnPoint.position.z);
                 break;
             case 9:
-                position = new Vector3(spawnPoint.position.x + 0.16f, spawnPoint.position.y + 0.52f, spawnPoint.position.z);
+                position = new Vector3(spawnPoint.position.x + 0.24f, spawnPoint.position.y + 0.78f, spawnPoint.position.z);
                 break;
         }
 

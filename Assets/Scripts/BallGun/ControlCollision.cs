@@ -16,24 +16,15 @@ public class ControlCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
 
         
-
-         if(other.gameObject.CompareTag("Player"))
+        if(other.CompareTag("Player"))
         {
-            Destroy(gameObject);
             Rigidbody rbOther = other.GetComponent<Rigidbody>();
-            //if(rbOther == null) return;
 
-            Vector3 force = _rb.velocity.normalized * forceMagnitude;            
+            Vector3 force = _rb.velocity.normalized * forceMagnitude;
 
-            ContactPoint [] contacts = new ContactPoint[10];
-            if(other.GetComponent<Collider>().GetComponent<Collision>().GetContacts(contacts) > 0)
-            {
-                Vector3 point = contacts[0].point;
-                rbOther.AddForceAtPosition(force, point, ForceMode.Impulse);
-            }            
+            rbOther.AddForceAtPosition(force, other.ClosestPoint(transform.position), ForceMode.Impulse);
+         } 
 
-            _rb.velocity = Vector3.zero;
-        }
     }
-   
+        
 }
