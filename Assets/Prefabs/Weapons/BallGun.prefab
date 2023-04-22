@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 6874306907783137582}
   m_Layer: 0
   m_Name: BallGun
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -996,6 +996,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4363463078161287691}
     m_Modifications:
+    - target: {fileID: 3085408039529609899, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102656003637252783, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091821394285975292, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 5256440148559265696, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1056,6 +1068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallsGun
       objectReference: {fileID: 0}
+    - target: {fileID: 5256440148559265697, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 5256440149432129044, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1068,12 +1084,74 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShootPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 5256440149432129045, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748763219017814, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748763504533603, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748763619552142, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748763802548565, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748764026450534, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748764426193925, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 6359748764426193926, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 99cd563f5fc52854ba4badda9946141a, type: 2}
+    - target: {fileID: 6359748764450961540, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748764571603233, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748765087305408, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748765220752141, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748765272531222, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403534532629754774, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880906342414646442, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748935206159599943, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4847135756415680061, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+    - {fileID: 4528792955095596171, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+    - {fileID: 4847135757294907455, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
 --- !u!4 &1699213587049834341 stripped
 Transform:
