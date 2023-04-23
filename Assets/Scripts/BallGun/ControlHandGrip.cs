@@ -24,11 +24,13 @@ public class ControlHandGrip : MonoBehaviour
             if(grabber.GetController() == OVRInput.Controller.LTouch)
             {
                 _ovrGrabbable.SetSnapOffset(transformForLeftHand);
+                GetComponent<Shoot>().LeftHand = true;
             }
 
             if(grabber.GetController() == OVRInput.Controller.RTouch)
             {
                 _ovrGrabbable.SetSnapOffset(transformForRightHand);
+                GetComponent<Shoot>().LeftHand = false;
             }
         }
         
