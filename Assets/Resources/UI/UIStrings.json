@@ -45,8 +45,18 @@
 	},
 
 	{
-		"Id": "Other",
-		"Line": "Test"
+		"Id": "GameInformation",
+		"Line": "Pulsa el botón verde para iniciar partida"
+	},
+
+	{
+		"Id": "GameInformation",
+		"Line": "Pulsa el botón azul para ver las instrucciones"
+	},
+
+	{
+		"Id": "GameInformation",
+		"Line": "Pulsa el botón rojo para volver a la plaza"
 	}
 		
 ]

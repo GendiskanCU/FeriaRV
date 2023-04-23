@@ -761,10 +761,9 @@ GameObject:
   - component: {fileID: 1930251639029894943}
   - component: {fileID: 1930251639029894940}
   - component: {fileID: 1930251639029894941}
-  - component: {fileID: 1930251639029894938}
-  - component: {fileID: 1930251639029894939}
+  - component: {fileID: 662878706}
   m_Layer: 5
-  m_Name: CanvasGameInfo
+  m_Name: GameInfoCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,7 +854,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1930251639029894938
+--- !u!114 &662878706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -864,28 +863,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1930251639029894937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 6881080a52c88074b9e7c6eb8fec24d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  pointer: {fileID: 0}
-  sortOrder: 0
---- !u!114 &1930251639029894939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930251639029894937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 579867a336760b44d81a032568caac0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  gameInformationText: {fileID: 1930251641004569862}
+  timeBetweenLines: 4
+  numberOfIterations: 25
 --- !u!1 &1930251639122067912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2229,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930251641004569860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2255,8 +2238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0052000284, y: 0}
-  m_SizeDelta: {x: 0.0104, y: 0}
+  m_AnchoredPosition: {x: -0.0055000186, y: 0}
+  m_SizeDelta: {x: -0.0006, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1930251641004569881
 CanvasRenderer:
@@ -2286,7 +2269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pulsa el bot\xF3n verde para iniciar partida"
+  m_text: "Pulsa el bot\xF3n rojo para volver a la plaza"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
