@@ -8163,23 +8163,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePanel
       objectReference: {fileID: 0}
-    - target: {fileID: 1930251641004569862, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
-      propertyPath: m_text
-      value: "Se te dar\xE1 un extra de 3 puntos si tiras todos los rollos de un
-        solo disparo."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1930251641004569863, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -0.0272
-      objectReference: {fileID: 0}
-    - target: {fileID: 1930251641004569863, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.0059
-      objectReference: {fileID: 0}
-    - target: {fileID: 1930251641004569863, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.0038999915
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
 --- !u!1001 &4644586138514617219

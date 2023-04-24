@@ -20,6 +20,8 @@ public class GameInfoCanvas : MonoBehaviour
     private List<string> informationStrings = new List<string>();
     private List<string> instructionsStrings = new List<string>();
 
+    private List<string> exitMessageStrings = new List<string>();
+
     private FeriaVirtualJSONDataProvider jSONDataProvider = new FeriaVirtualJSONDataProvider();
 
 
@@ -41,6 +43,12 @@ public class GameInfoCanvas : MonoBehaviour
                 instructionsStrings.Add(str.Line);
         }
 
+        foreach(UIStrings str in uIStrings)
+        {
+            if(str.Id == "ReturnToPlace")
+                exitMessageStrings.Add(str.Line);
+        }
+
         if(informationStrings.Count > 0)
         {
             showInformation = SetInfoText(informationStrings, numberOfIterations);
@@ -50,6 +58,8 @@ public class GameInfoCanvas : MonoBehaviour
 
     private IEnumerator SetInfoText(List<string> lines, int iterations = 1)
    {
+        gameInformationText.text = "";
+        yield return new WaitForSeconds(timeBetweenLines);
         int iteration = 0;
         while (iteration < iterations)
         {
@@ -61,6 +71,33 @@ public class GameInfoCanvas : MonoBehaviour
                 counter++;
             }
             iteration++;
-        }        
+        }
+        gameInformationText.text = "";        
    }
+
+   public void ShowGameInstructions()
+   {
+        if(instructionsStrings.Count > 0)
+        {
+            StopCoroutine(showInformation);
+            showInformation = SetInfoText(instructionsStrings, numberOfIterations);
+            StartCoroutine(showInformation);
+        }
+   }
+
+   public void ShowExitMessage()
+   {
+        if(exitMessageStrings.Count > 0)
+        {
+            StopCoroutine(showInformation);
+            showInformation = SetInfoText(exitMessageStrings, numberOfIterations);
+            StartCoroutine(showInformation);
+        }
+   }
+
+   public void ShowAMessage(string message)
+   {
+        StopCoroutine(showInformation);
+        gameInformationText.text = message;
+   }  
 }

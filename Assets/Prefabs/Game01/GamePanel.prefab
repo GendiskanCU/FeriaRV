@@ -303,8 +303,8 @@ GameObject:
   - component: {fileID: 5677603012069411357}
   - component: {fileID: 8080544167831405529}
   - component: {fileID: 3643358573231259199}
-  - component: {fileID: 4935782992144028647}
   - component: {fileID: 3679860995105037583}
+  - component: {fileID: 1242907799}
   m_Layer: 0
   m_Name: StartButton
   m_TagString: Untagged
@@ -390,20 +390,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4935782992144028647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938366256697831710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a316271e52efeaa41aff710e7b8fbbbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materialUnlocked: {fileID: 2100000, guid: dbd4bcb3c9747db44ac56c02157aeb23, type: 2}
-  materialLocked: {fileID: 2100000, guid: ee09c158a39a15f4393cee2b3460ceac, type: 2}
 --- !u!54 &3679860995105037583
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -420,6 +406,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1242907799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938366256697831710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63e8b59d31588345803596b310924da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialUnlocked: {fileID: 2100000, guid: dbd4bcb3c9747db44ac56c02157aeb23, type: 2}
+  materialLocked: {fileID: 2100000, guid: ee09c158a39a15f4393cee2b3460ceac, type: 2}
+  gameInfoCanvas: {fileID: 662878706}
 --- !u!1 &975745130878088983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,8 +1173,8 @@ GameObject:
   - component: {fileID: 1930251639430941759}
   - component: {fileID: 1930251639430941756}
   - component: {fileID: 1930251639430941757}
-  - component: {fileID: 1930251639430941758}
   - component: {fileID: 1930251639430941745}
+  - component: {fileID: 1855808699}
   m_Layer: 0
   m_Name: InstructionsButton
   m_TagString: Untagged
@@ -1259,20 +1260,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1930251639430941758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930251639430941755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a316271e52efeaa41aff710e7b8fbbbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materialUnlocked: {fileID: 2100000, guid: 42ace93ce0efc894faa7ca4ad437b906, type: 2}
-  materialLocked: {fileID: 2100000, guid: ee09c158a39a15f4393cee2b3460ceac, type: 2}
 --- !u!54 &1930251639430941745
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1289,6 +1276,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1855808699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930251639430941755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63e8b59d31588345803596b310924da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialUnlocked: {fileID: 2100000, guid: 42ace93ce0efc894faa7ca4ad437b906, type: 2}
+  materialLocked: {fileID: 2100000, guid: ee09c158a39a15f4393cee2b3460ceac, type: 2}
+  gameInfoCanvas: {fileID: 662878706}
 --- !u!1 &1930251639601725208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,7 +2231,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930251641004569860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0002}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2238,8 +2240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0055000186, y: 0}
-  m_SizeDelta: {x: -0.0006, y: 0}
+  m_AnchoredPosition: {x: 0.0038999915, y: 0}
+  m_SizeDelta: {x: -0.0272, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1930251641004569881
 CanvasRenderer:
@@ -2269,7 +2271,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pulsa el bot\xF3n rojo para volver a la plaza"
+  m_text: "Se te dar\xE1 un extra de 3 puntos si tiras todos los rollos de un solo
+    disparo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3082,8 +3085,8 @@ GameObject:
   - component: {fileID: 6650842793799547092}
   - component: {fileID: 7857286704252115732}
   - component: {fileID: 107550641656001950}
-  - component: {fileID: 2878443815755953911}
   - component: {fileID: 3010646159428067224}
+  - component: {fileID: 782901854}
   m_Layer: 0
   m_Name: ExitButton
   m_TagString: Untagged
@@ -3169,20 +3172,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2878443815755953911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5799034003836034842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a316271e52efeaa41aff710e7b8fbbbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materialUnlocked: {fileID: 2100000, guid: da23950fb65837c49b80f00925825c1c, type: 2}
-  materialLocked: {fileID: 2100000, guid: ee09c158a39a15f4393cee2b3460ceac, type: 2}
 --- !u!54 &3010646159428067224
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3199,6 +3188,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &782901854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799034003836034842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63e8b59d31588345803596b310924da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialUnlocked: {fileID: 2100000, guid: da23950fb65837c49b80f00925825c1c, type: 2}
+  materialLocked: {fileID: 2100000, guid: da23950fb65837c49b80f00925825c1c, type: 2}
+  gameInfoCanvas: {fileID: 662878706}
 --- !u!1 &5858042581108739023
 GameObject:
   m_ObjectHideFlags: 0

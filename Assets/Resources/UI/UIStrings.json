@@ -57,6 +57,86 @@
 	{
 		"Id": "GameInformation",
 		"Line": "Pulsa el botón rojo para volver a la plaza"
+	},
+
+	{
+		"Id": "ReturnToPlace",
+		"Line": "¿Quieres salir del juego y volver a la plaza?"
+	},
+
+	{
+		"Id": "ReturnToPlace",
+		"Line": "(La puntuación alcanzada hasta ahora se guardará)."
+	},
+
+	{
+		"Id": "ReturnToPlace",
+		"Line": "Pulsa nuevamente el botón rojo para confirmar que quieres salir."
+	},
+
+	{
+		"Id": "ReturnToPlace",
+		"Line": "O pulsa el botón azul o verde para seguir jugando."
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "Cuando el juego dé comienzo, una pistola de bolas aparecerá encima de la mesa."
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "Utilízala para disparar bolas hacia los rollos de papel que aparecerán encima"
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "de la tabla situada en la parte central del área de juego (suelo verde)."
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "Solo dispondrás de 5 disparos y un límite de tiempo de 45 segundos para tratar de tirar el"
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "mayor número de rollos fuera de la tabla. Ojo, no será suficiente tumbarlos, para"
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "puntuar, los rollos deberán caer FUERA de la tabla."
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "Por cada rollo que caiga fuera de la tabla, se te concederá 1 punto."
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "Si todos los rollos ya han caído fuera de la tabla, y aún te queda algún disparo en la"
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "pistola, todos los rollos se situarán nuevamente en la tabla y podrás"
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "continuar disparándoles para lograr más puntos."
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "Puedes colocarte donde quieras dentro del límite del suelo marrón."
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "El juego termina si agotas los 5 disparos o si el tiempo llega a cero."
 	}
 		
 ]
