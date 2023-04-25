@@ -57,8 +57,7 @@ public class GameInfoCanvas : MonoBehaviour
     }
 
     private IEnumerator SetInfoText(List<string> lines, int iterations = 1)
-   {
-        gameInformationText.text = "";
+   {        
         yield return new WaitForSeconds(timeBetweenLines);
         int iteration = 0;
         while (iteration < iterations)

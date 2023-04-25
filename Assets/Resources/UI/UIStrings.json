@@ -71,12 +71,12 @@
 
 	{
 		"Id": "ReturnToPlace",
-		"Line": "Pulsa nuevamente el botón rojo para confirmar que quieres salir."
+		"Line": "Dirígete hacia la caseta de feria para volver a la plaza."
 	},
 
 	{
 		"Id": "ReturnToPlace",
-		"Line": "O pulsa el botón azul o verde para seguir jugando."
+		"Line": "O pulsa el botón azul/verde para desactivar la salida y seguir jugando."
 	},
 
 	{

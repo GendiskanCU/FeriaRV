@@ -9,8 +9,9 @@ public class GameButtonsCanvas : MonoBehaviour
 
     [SerializeField] private GameInfoCanvas gameInfoCanvas;
     
-    private bool locked;
-    private bool waitingForExitResponse;
+    private bool locked = false;    
+
+    public bool waitingForExitResponse = false;
     private MeshRenderer _meshRenderer;
     private Vector3 unlockedPosition;
 
@@ -28,11 +29,11 @@ public class GameButtonsCanvas : MonoBehaviour
             switch(gameObject.name)
             {
                 case "InstructionsButton":  
-                    Lock();                  
+                    Lock();
+                    gameInfoCanvas.ShowAMessage("TIRA-ROLLOS: INSTRUCCIONES");                  
                     gameInfoCanvas.ShowGameInstructions();
                     GameObject.Find("StartButton").GetComponent<GameButtonsCanvas>().Unlock();
-                    GameObject.Find("ExitButton").GetComponent<GameButtonsCanvas>().Unlock();
-                    waitingForExitResponse = false;
+                    GameObject.Find("ExitButton").GetComponent<GameButtonsCanvas>().Unlock();                    
                 break;
 
                 case "StartButton": 
@@ -40,26 +41,25 @@ public class GameButtonsCanvas : MonoBehaviour
                     gameInfoCanvas.ShowAMessage("El juego está en marcha... ¡SUERTE!");                   
                     GameObject.Find("GameBoard").GetComponent<GameBoard>().GameBegins();
                     GameObject.Find("InstructionsButton").GetComponent<GameButtonsCanvas>().Unlock();
-                    GameObject.Find("ExitButton").GetComponent<GameButtonsCanvas>().Unlock();
-                    waitingForExitResponse = false;
+                    GameObject.Find("ExitButton").GetComponent<GameButtonsCanvas>().Unlock();                    
                 break;
 
                 case "ExitButton":
-                    if(!waitingForExitResponse)
-                    {
-                        waitingForExitResponse = true;
-                        gameInfoCanvas.ShowExitMessage();
-                        GameObject.Find("InstructionsButton").GetComponent<GameButtonsCanvas>().Unlock();
-                        GameObject.Find("StartButton").GetComponent<GameButtonsCanvas>().Unlock();
-                    }                        
-                    else
-                    {
-                        gameInfoCanvas.ShowAMessage("Saliendo del juego... Gracias por tu visita");
-                    }
+                    Lock();                    
+                    gameInfoCanvas.ShowAMessage("SALIDA DEL JUEGO ACTIVADA");
+                    gameInfoCanvas.ShowExitMessage();
+                    GameObject.Find("InstructionsButton").GetComponent<GameButtonsCanvas>().Unlock();
+                    GameObject.Find("StartButton").GetComponent<GameButtonsCanvas>().Unlock();                    
+                    waitingForExitResponse = true;
                 break;
             }                        
         }
-    }
+
+        if(other.gameObject.tag == "ButtonsPusser" && waitingForExitResponse && gameObject.name == "ExitButton")
+        {
+            //gameInfoCanvas.ShowAMessage("Saliendo del juego... ¡Gracias por tu visita!");
+        }
+    }    
 
     public void Lock()
     {
