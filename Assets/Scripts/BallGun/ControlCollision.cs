@@ -35,6 +35,8 @@ public class ControlCollision : MonoBehaviour
         
         if(!other.CompareTag("Weapon") && !other.CompareTag("BonusZone"))
         {
+            gameObject.SetActive(false);
+            
             Instantiate(collisionEffect, transform.position, transform.rotation);
 
             gameManager.DecreaseAttempts(1);

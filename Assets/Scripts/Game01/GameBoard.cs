@@ -10,11 +10,24 @@ public class GameBoard : MonoBehaviour
     [SerializeField] private List<GameObject> rolls;
 
     [SerializeField] private float standbyTimeForNewBoard = 3.0f;
+    [SerializeField] private int extraBonus = 3;
 
     private bool gameBoardCreated;
 
     private int rollsInTable;
+    private BonusZone bonusZone;
 
+    private GameManager gameManager;
+
+
+    private void Awake() {
+        bonusZone = transform.Find("BonusZone").gameObject.GetComponent<BonusZone>();
+        bonusZone.OnRollOffBoard.AddListener(UpdateNumberRolls);
+    }
+
+    private void Start() {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     
     public void GameBegins()
     {
@@ -49,6 +62,7 @@ public class GameBoard : MonoBehaviour
 
     private void RestoreBoard()
     {
+        rollsInTable = rolls.Count;
         for(int pos = 0; pos < rolls.Count; pos++)
         {
             rolls[pos].transform.rotation = spawnPoint.rotation;
@@ -94,24 +108,22 @@ public class GameBoard : MonoBehaviour
         }
 
         return position;
-    }
+    }    
 
-    private void OnTriggerExit(Collider other) {
-        if(other.CompareTag("Player"))
-        {
-            rollsInTable--;
+    private void UpdateNumberRolls()
+    {
+        rollsInTable--;
 
-            if(rollsInTable <= 0)
-            {
-                StartCoroutine(PlacingNewBoard());
-            }
+        if(rollsInTable <= 0)
+        {            
+            StartCoroutine(PlacingNewBoard());
         }
     }
 
     private IEnumerator PlacingNewBoard()
     {
-        yield return new WaitForSeconds(standbyTimeForNewBoard);
-        rollsInTable = rolls.Count;
+        gameManager.IncreaseScore(extraBonus);
+        yield return new WaitForSeconds(standbyTimeForNewBoard);        
         RestoreBoard();
     }
 }

@@ -11,7 +11,8 @@ public class Shoot : MonoBehaviour
     private bool leftHand = false;    
 
     public bool LeftHand { get => leftHand; set => leftHand = value; }
-    
+    public bool CanShoot { get => canShoot; set => canShoot = value; }
+    private bool canShoot;    
 
     private void Update() {
         if(GetComponent<OVRGrabbable>().isGrabbed){        
@@ -35,8 +36,14 @@ public class Shoot : MonoBehaviour
 
     private void BallShoot()
     {
-        Instantiate(ball, shootPoint.position,
+        if(CanShoot)
+        {
+            Instantiate(ball, shootPoint.position,
             shootPoint.rotation).GetComponent<Rigidbody>().AddForce(shootPoint.forward * shootForce * 1.5f);        
-        
-    }
+        }
+        else
+        {
+            //No puede disparar
+        }        
+    }    
 }

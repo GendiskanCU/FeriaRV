@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameInfoCanvas gameInfoCanvas;
 
+    public UnityEvent OnGameEnds;
+
     private int score = 0;
     private int totalTime = 0;
     private int remainingTime = 0;
@@ -17,9 +20,13 @@ public class GameManager : MonoBehaviour
     private int remainingAttempts = 0;
 
     private bool gameInProgress = false;
+
+    private Shoot ballGun;
     
     void Start()
     {
+        ballGun = GameObject.Find("BallGun").GetComponent<Shoot>();
+
         switch(SceneManager.GetActiveScene().name)
         {
             case "Game01":
@@ -31,10 +38,17 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
+        ballGun.CanShoot = false;
         gameInProgress = false;
 
         StopCoroutine(TimerGame());
-        gameInfoCanvas.ShowAMessage(string.Format("JUEGO FINALIZADO. HAS LOGRADO {0} PUNTOS", score));       
+
+        GlobalData.SharedInstance.TotalScore += score;
+
+        gameInfoCanvas.ShowAMessage(string.Format("JUEGO FINALIZADO. Has sumado {0} puntos y en total tienes {1} puntos",
+         score, GlobalData.SharedInstance.TotalScore));       
+
+        OnGameEnds.Invoke();
         
     }    
 
@@ -66,23 +80,22 @@ public class GameManager : MonoBehaviour
     {
         remainingTime = totalTime;
         remainingAttempts = totalAttempts;
-        score = 0;
-        gameInProgress = true;
+        score = 0;        
 
         gameInfoCanvas.ShowTimeText(FormatTime(remainingTime));
         gameInfoCanvas.ShowAttemptsText(remainingAttempts.ToString("00"));        
         gameInfoCanvas.ShowScoreText(score.ToString("000"));
-        StartCoroutine(TimerGame());        
+
+        ballGun.CanShoot = true;
+        gameInProgress = true;
+
+        StartCoroutine(TimerGame());
     }
 
     public void IncreaseScore(int increment)
-    {
-        if(gameInProgress)
-        {
-            score += increment;
-            gameInfoCanvas.ShowScoreText(score.ToString("000"));
-        }
-        
+    {       
+        score += increment;
+        gameInfoCanvas.ShowScoreText(score.ToString("000"));        
     }
 
     public void DecreaseAttempts(int decrecement)

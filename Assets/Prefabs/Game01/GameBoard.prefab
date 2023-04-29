@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4644586138101738844}
   - component: {fileID: 4644586138101738851}
-  - component: {fileID: 5351483550769630876}
   m_Layer: 0
   m_Name: GameBoard
   m_TagString: Untagged
@@ -63,19 +62,7 @@ MonoBehaviour:
   goldRoll: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
   rolls: []
   standbyTimeForNewBoard: 3
---- !u!65 &5351483550769630876
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4644586138101738845}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.921498, z: 1.2106676}
-  m_Center: {x: 0, y: 1.3936985, z: 0.0075957775}
+  extraBonus: 3
 --- !u!1 &8980477303759751658
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameInfoCanvas: {fileID: 0}
   bonusScore: 1
+  OnRollOffBoard:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &203006953716110932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,9 +311,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -81.382
       objectReference: {fileID: 0}
+    - target: {fileID: 3083468038421643921, guid: 1266d432c3787bf46b27587858682b49, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
       propertyPath: m_Name
       value: RollGold (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
       propertyPath: m_IsActive
@@ -387,9 +385,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3083468038421643921, guid: 1266d432c3787bf46b27587858682b49, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
       propertyPath: m_Name
       value: RollGold
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
       propertyPath: m_IsActive
@@ -409,9 +415,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4644586138101738844}
     m_Modifications:
+    - target: {fileID: 3177895366282971673, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_Name
       value: RollWhite (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_IsActive
@@ -475,9 +489,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4644586138101738844}
     m_Modifications:
+    - target: {fileID: 3177895366282971673, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_Name
       value: RollWhite (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_IsActive
@@ -541,9 +563,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4644586138101738844}
     m_Modifications:
+    - target: {fileID: 3177895366282971673, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_Name
       value: RollWhite (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_IsActive
@@ -651,9 +681,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -88.92
       objectReference: {fileID: 0}
+    - target: {fileID: 3083468038421643921, guid: 1266d432c3787bf46b27587858682b49, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
       propertyPath: m_Name
       value: RollGold (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
       propertyPath: m_IsActive
@@ -673,9 +711,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4644586138101738844}
     m_Modifications:
+    - target: {fileID: 3177895366282971673, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_Name
       value: RollWhite
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_IsActive
@@ -783,9 +829,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3083468038421643921, guid: 1266d432c3787bf46b27587858682b49, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
       propertyPath: m_Name
       value: RollGold (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3083468038421643923, guid: 1266d432c3787bf46b27587858682b49, type: 3}
       propertyPath: m_IsActive
@@ -871,9 +925,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4644586138101738844}
     m_Modifications:
+    - target: {fileID: 3177895366282971673, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_Name
       value: RollWhite (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_IsActive
@@ -937,9 +999,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4644586138101738844}
     m_Modifications:
+    - target: {fileID: 3177895366282971673, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_Name
       value: RollWhite (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3177895366282971675, guid: 700e68acad730374e86c1c478487159f, type: 3}
       propertyPath: m_IsActive

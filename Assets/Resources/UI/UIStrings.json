@@ -121,12 +121,17 @@
 
 	{
 		"Id": "Game01",
-		"Line": "nuevos rollos se situarán encima de la tabla y podrás"
+		"Line": "lograrás sumar 3 puntos extra y los rollos"
 	},
 
 	{
 		"Id": "Game01",
-		"Line": "continuar disparándoles para lograr más puntos."
+		"Line": "volverán a colocarse encima de la tabla para que puedas"
+	},
+
+	{
+		"Id": "Game01",
+		"Line": "continuar disparándoles hasta el final del juego."
 	},
 
 	{
