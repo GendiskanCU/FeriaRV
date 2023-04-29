@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702100945903071572}
   - component: {fileID: 702100945903071573}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702100946163145375}
   - component: {fileID: 702100946163145374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 702100946914833700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4363463078064723982}
   - component: {fileID: 4363463078064723983}
   - component: {fileID: 4363463078064723980}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 4363463078161287683}
   - component: {fileID: 4363463078162090541}
   - component: {fileID: 4363463078163187949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun_Tigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 4363463078161287689}
   - component: {fileID: 4363463078162090539}
   - component: {fileID: 4363463078163187947}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 702100946171138072}
   - component: {fileID: 702100946171138073}
   - component: {fileID: 6874306907783137582}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BallGun
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 4363463078161287693}
   - component: {fileID: 4363463078162090543}
   - component: {fileID: 4363463078163187951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun_Loader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 4363463078161287695}
   - component: {fileID: 4363463078162090537}
   - component: {fileID: 4363463078163187945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun_Bullet_Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 4363463078304125096}
   - component: {fileID: 4363463078304125098}
   - component: {fileID: 4363463078304125099}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 4363463078335900447}
   - component: {fileID: 4363463078335900641}
   - component: {fileID: 4363463078335900446}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 4363463078444686276}
   - component: {fileID: 4363463078444686278}
   - component: {fileID: 4363463078444686279}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 6874306909531832456}
   - component: {fileID: 6874306909531832457}
   - component: {fileID: 6874306909531832458}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ScifiHandGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,12 +997,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 4363463078161287691}
     m_Modifications:
     - target: {fileID: 3085408039529609899, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085408039529609899, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 3102656003637252783, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102656003637252783, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091821394285975292, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5091821394285975292, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
@@ -1069,6 +1081,10 @@ PrefabInstance:
       value: BallsGun
       objectReference: {fileID: 0}
     - target: {fileID: 5256440148559265697, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256440148559265697, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
@@ -1085,28 +1101,60 @@ PrefabInstance:
       value: ShootPoint
       objectReference: {fileID: 0}
     - target: {fileID: 5256440149432129045, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256440149432129045, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748763219017814, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6359748763219017814, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 6359748763504533603, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748763504533603, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 6359748763619552142, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748763619552142, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748763766032695, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748763802548565, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6359748763802548565, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 6359748764026450534, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748764026450534, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748764426193925, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6359748764426193925, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
@@ -1117,32 +1165,72 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 99cd563f5fc52854ba4badda9946141a, type: 2}
     - target: {fileID: 6359748764450961540, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748764450961540, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 6359748764571603233, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748764571603233, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748764817429931, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748765083890095, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748765087305408, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6359748765087305408, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 6359748765220752141, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748765220752141, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359748765272531222, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6359748765272531222, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 6403534532629754774, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403534532629754774, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 7880906342414646442, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880906342414646442, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748935206159599943, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8748935206159599943, guid: 77ed2fe61a5448e44b17579d4d0a8ac1, type: 3}
       propertyPath: m_TagString

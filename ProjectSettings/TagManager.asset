@@ -9,6 +9,7 @@ TagManager:
   - ButtonsPusser
   - DedoIndice
   - PlayerHand
+  - BonusZone
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
+  - Weapon
+  - BonusZone
   - 
   - 
   - 

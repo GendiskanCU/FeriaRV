@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8311474531166716271}
   - component: {fileID: 5784586088392831251}
   - component: {fileID: 979730365992191876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BallClown
   m_TagString: Weapon
   m_Icon: {fileID: 0}

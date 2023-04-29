@@ -8,9 +8,10 @@ public class Shoot : MonoBehaviour
     [SerializeField] private float shootForce = 50.0f;
     [SerializeField] private Transform shootPoint;
 
-    private bool leftHand = false;
+    private bool leftHand = false;    
 
     public bool LeftHand { get => leftHand; set => leftHand = value; }
+    
 
     private void Update() {
         if(GetComponent<OVRGrabbable>().isGrabbed){        
@@ -35,6 +36,7 @@ public class Shoot : MonoBehaviour
     private void BallShoot()
     {
         Instantiate(ball, shootPoint.position,
-            shootPoint.rotation).GetComponent<Rigidbody>().AddForce(shootPoint.forward * shootForce * 1.5f);
+            shootPoint.rotation).GetComponent<Rigidbody>().AddForce(shootPoint.forward * shootForce * 1.5f);        
+        
     }
 }

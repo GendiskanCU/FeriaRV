@@ -6,13 +6,19 @@ public class ControlCollision : MonoBehaviour
 {
      [SerializeField] private float forceMagnitude = 2.5f;
 
-     [SerializeField] private GameObject collisionEffect;
+     [SerializeField] private GameObject collisionEffect;     
 
      private Rigidbody _rb;
-    // Start is called before the first frame update
+
+     private GameManager gameManager;
+
+    
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -26,12 +32,16 @@ public class ControlCollision : MonoBehaviour
 
             rbOther.AddForceAtPosition(force, other.ClosestPoint(transform.position), ForceMode.Impulse);
         } 
-
-        if(!other.CompareTag("Weapon"))
+        
+        if(!other.CompareTag("Weapon") && !other.CompareTag("BonusZone"))
         {
             Instantiate(collisionEffect, transform.position, transform.rotation);
-            //Destroy(gameObject);
+
+            gameManager.DecreaseAttempts(1);
+
+            Destroy(gameObject);        
         }
+        
     }
         
 }

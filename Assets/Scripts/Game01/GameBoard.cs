@@ -9,7 +9,11 @@ public class GameBoard : MonoBehaviour
 
     [SerializeField] private List<GameObject> rolls;
 
+    [SerializeField] private float standbyTimeForNewBoard = 3.0f;
+
     private bool gameBoardCreated;
+
+    private int rollsInTable;
 
     
     public void GameBegins()
@@ -36,6 +40,7 @@ public class GameBoard : MonoBehaviour
 
             newRoll.transform.parent = transform;
             rolls.Add(newRoll);
+            rollsInTable++;
         }
     
         gameBoardCreated = true;
@@ -44,7 +49,7 @@ public class GameBoard : MonoBehaviour
 
     private void RestoreBoard()
     {
-        for(int pos = 0; pos <= 9; pos++)
+        for(int pos = 0; pos < rolls.Count; pos++)
         {
             rolls[pos].transform.rotation = spawnPoint.rotation;
             rolls[pos].GetComponent<Rigidbody>().MovePosition(GetPosition(pos));            
@@ -89,5 +94,24 @@ public class GameBoard : MonoBehaviour
         }
 
         return position;
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if(other.CompareTag("Player"))
+        {
+            rollsInTable--;
+
+            if(rollsInTable <= 0)
+            {
+                StartCoroutine(PlacingNewBoard());
+            }
+        }
+    }
+
+    private IEnumerator PlacingNewBoard()
+    {
+        yield return new WaitForSeconds(standbyTimeForNewBoard);
+        rollsInTable = rolls.Count;
+        RestoreBoard();
     }
 }

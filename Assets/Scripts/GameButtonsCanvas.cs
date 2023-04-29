@@ -15,12 +15,15 @@ public class GameButtonsCanvas : MonoBehaviour
     private MeshRenderer _meshRenderer;
     private Vector3 unlockedPosition;
 
+    private GameManager gameManager;
     
 
     private void Start() {
         unlockedPosition = transform.localPosition;
         _meshRenderer = GetComponent<MeshRenderer>();
         _meshRenderer.material = materialUnlocked;        
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     
     private void OnTriggerEnter(Collider other) {        
@@ -30,7 +33,7 @@ public class GameButtonsCanvas : MonoBehaviour
             {
                 case "InstructionsButton":  
                     Lock();
-                    gameInfoCanvas.ShowAMessage("TIRA-ROLLOS: INSTRUCCIONES");                  
+                    gameInfoCanvas.ShowAMessage("INSTRUCCIONES");                  
                     gameInfoCanvas.ShowGameInstructions();
                     GetComponent<GameButtonsCanvas>().Lock();                                                                              
                 break;
@@ -41,7 +44,9 @@ public class GameButtonsCanvas : MonoBehaviour
                     GameObject.Find("GameBoard").GetComponent<GameBoard>().GameBegins();
                     GetComponent<GameButtonsCanvas>().Lock();
                     GameObject.Find("InstructionsButton").GetComponent<GameButtonsCanvas>().Unlock();
-                    GameObject.Find("ExitButton").GetComponent<GameButtonsCanvas>().Lock();                                        
+                    GameObject.Find("ExitButton").GetComponent<GameButtonsCanvas>().Lock();
+
+                    gameManager.StartNewGame();                                        
                 break;
 
                 case "ExitButton":                    

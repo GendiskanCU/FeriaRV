@@ -81,7 +81,7 @@
 
 	{
 		"Id": "Game01",
-		"Line": "Cuando el juego dé comienzo, una pistola de bolas aparecerá encima de la mesa."
+		"Line": "Cuando el juego dé comienzo, coge la pistola de bolas que hay encima de la mesa."
 	},
 
 	{
@@ -96,7 +96,7 @@
 
 	{
 		"Id": "Game01",
-		"Line": "Solo dispondrás de 5 disparos y un límite de tiempo de 45 segundos para tratar de tirar el"
+		"Line": "Tendrás un límite de tiempo y de intentos para tratar de tirar el"
 	},
 
 	{
@@ -116,12 +116,12 @@
 
 	{
 		"Id": "Game01",
-		"Line": "Si todos los rollos ya han caído fuera de la tabla, y aún te queda algún disparo en la"
+		"Line": "Si todos los rollos ya han caído fuera de la tabla, y aún te restan intentos"
 	},
 
 	{
 		"Id": "Game01",
-		"Line": "pistola, todos los rollos se situarán nuevamente en la tabla y podrás"
+		"Line": "nuevos rollos se situarán encima de la tabla y podrás"
 	},
 
 	{
@@ -136,7 +136,7 @@
 
 	{
 		"Id": "Game01",
-		"Line": "El juego termina si agotas los 5 disparos o si el tiempo llega a cero."
+		"Line": "El juego termina si agotas los intentos o si el tiempo llega a cero."
 	}
 		
 ]

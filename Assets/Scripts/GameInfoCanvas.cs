@@ -9,6 +9,9 @@ using FeriaVirtual;
 public class GameInfoCanvas : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI gameInformationText;
+    [SerializeField] private TextMeshProUGUI gameTimeText;
+    [SerializeField] private TextMeshProUGUI gameAttemptsText;
+    [SerializeField] private TextMeshProUGUI gameScoreText;
 
     [SerializeField] private float timeBetweenLines = 4.0f;
 
@@ -54,6 +57,8 @@ public class GameInfoCanvas : MonoBehaviour
             showInformation = SetInfoText(informationStrings, numberOfIterations);
             StartCoroutine(showInformation);
         }
+
+        ResetTextPanels();
     }
 
     private IEnumerator SetInfoText(List<string> lines, int iterations = 1)
@@ -72,6 +77,13 @@ public class GameInfoCanvas : MonoBehaviour
             iteration++;
         }
         gameInformationText.text = "";        
+   }
+
+   public void ResetTextPanels()
+   {        
+        ShowTimeText("00:00");
+        ShowAttemptsText("0");
+        ShowScoreText("0");
    }
 
    public void ShowGameInstructions()
@@ -99,4 +111,20 @@ public class GameInfoCanvas : MonoBehaviour
         StopCoroutine(showInformation);
         gameInformationText.text = message;
    }  
+
+    public void ShowTimeText(string newTime)
+   {
+        gameTimeText.text = newTime;
+   }
+
+   public void ShowAttemptsText(string attempts)
+   {
+        gameAttemptsText.text = attempts;
+   }
+
+   public void ShowScoreText(string newScore)
+   {
+        gameScoreText.text = newScore;
+   }
+
 }
