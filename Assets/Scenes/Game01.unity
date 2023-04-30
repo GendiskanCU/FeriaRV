@@ -1281,8 +1281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d727da5b7adfdb45935f2c62668fa09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForGame01: 1200
-  attemptsForGame01: 20
+  timeForGame01: 45
+  attemptsForGame01: 15
   gameInfoCanvas: {fileID: 64967118}
   OnGameEnds:
     m_PersistentCalls:

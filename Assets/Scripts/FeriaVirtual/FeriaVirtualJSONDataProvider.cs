@@ -12,14 +12,14 @@ namespace FeriaVirtual{
             TextAsset fileWithUIStrings = Resources.Load<TextAsset>("UI/UIStrings");
             string fileContent = fileWithUIStrings.text;
 
-            Debug.Log(fileWithUIStrings);
+            //Debug.Log(fileWithUIStrings);
 
             UIStrings [] jsonInf = JsonHelper.GetJsonArray<UIStrings>(fileContent);
 
-            foreach(UIStrings str in jsonInf)
+            /*foreach(UIStrings str in jsonInf)
             {
                 Debug.Log(str.Line);
-            }
+            }*/
 
             return jsonInf.ToList();
         }

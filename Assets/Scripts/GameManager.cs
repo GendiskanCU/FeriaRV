@@ -38,8 +38,8 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        ballGun.CanShoot = false;
         gameInProgress = false;
+        ballGun.CanShoot = false;        
 
         StopCoroutine(TimerGame());
 

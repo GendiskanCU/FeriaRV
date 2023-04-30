@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameButtonsCanvas : MonoBehaviour
 {    
@@ -52,7 +53,8 @@ public class GameButtonsCanvas : MonoBehaviour
                     Lock();   
                     gameInfoCanvas.ShowAMessage("Saliendo del juego... ¡Gracias por tu visita!");
                     GameObject.Find("InstructionsButton").GetComponent<GameButtonsCanvas>().Lock();
-                    GameObject.Find("StartButton").GetComponent<GameButtonsCanvas>().Lock();                                         
+                    GameObject.Find("StartButton").GetComponent<GameButtonsCanvas>().Lock();
+                    Invoke("ExitGame", 4f);                                         
                     /*gameInfoCanvas.ShowAMessage("SALIR DEL JUEGO");
                     gameInfoCanvas.ShowExitMessage();*/                                                               
                 break;
@@ -72,5 +74,10 @@ public class GameButtonsCanvas : MonoBehaviour
         transform.localPosition = unlockedPosition;
         locked = false;
         _meshRenderer.material = materialUnlocked;
+    }
+
+    private void ExitGame()
+    {
+        SceneManager.LoadScene("LBA_Recreation");
     }
 }
