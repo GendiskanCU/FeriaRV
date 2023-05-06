@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GlobalData : MonoBehaviour
 {
-    private int totalScore = 0;    
+    private int totalScore = 0;   
+    
+    private int nextSpawnPoint = 0;//Punto de inicio del player
 
     public static GlobalData SharedInstance;
 
     public int TotalScore { get => totalScore; set => totalScore = value; }
+    public int NextSpawnPoint { get => nextSpawnPoint; set => nextSpawnPoint = value; }
 
     private void Awake() {
         if(SharedInstance != null)
@@ -20,5 +23,5 @@ public class GlobalData : MonoBehaviour
             SharedInstance = this;
             DontDestroyOnLoad(gameObject);
         }
-    }
+    }    
 }

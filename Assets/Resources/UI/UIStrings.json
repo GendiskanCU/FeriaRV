@@ -6,7 +6,12 @@
 
 	{
 		"Id": "Main",
-		"Line": "Acércate a alguna de las casetas\ncon juegos para jugar a ellos"
+		"Line": "Acércate a alguna de las casetas\ncon actividades y entra en la zona"
+	},
+
+	{
+		"Id": "Main",
+		"Line": "transparente para acceder\nal área de juego correspondiente."
 	},
 
 	{

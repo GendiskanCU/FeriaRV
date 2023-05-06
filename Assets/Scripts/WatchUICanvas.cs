@@ -16,7 +16,7 @@ public class WatchUICanvas : MonoBehaviour
     private List<string> mainStrings = new List<string>();
     private FeriaVirtualJSONDataProvider jSONDataProvider = new FeriaVirtualJSONDataProvider();
 
-    private IEnumerator showMainInformation;
+    private IEnumerator showInformation;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +31,43 @@ public class WatchUICanvas : MonoBehaviour
 
         if(mainStrings.Count > 0)
         {
-            showMainInformation = SetInfoText(mainStrings, mainInformationIterations);
-            StartCoroutine(showMainInformation);
+            showInformation = SetInfoText(mainStrings, mainInformationIterations);
+            StartCoroutine(showInformation);
         }
+    }
+
+    public void ShowScores()
+    {
+        StopCoroutine(showInformation);
+
+        List<string> scoreText = new List<string>();
+
+        string line = string.Format("Tu puntuación total es: {0}",GlobalData.SharedInstance.TotalScore);
+        scoreText.Add(line);
+        line = string.Format("La máxima puntuación alcanzada es: {0}", 9999);
+        scoreText.Add(line);
+        line= "";
+        scoreText.Add(line);
+
+        showInformation = SetInfoText(scoreText, 5);
+        StartCoroutine(showInformation);
+    }
+
+    public void ShowInventory()
+    {
+        StopCoroutine(showInformation);
+        
+        List<string> inventoryText = new List<string>();
+
+        string line = string.Format("Tu inventario de premios está vacío");
+        inventoryText.Add(line);
+        line = string.Format("Consigue puntos jugando y canjéalos en la caseta de premios");
+        inventoryText.Add(line);
+        line= "";
+        inventoryText.Add(line);
+
+        showInformation = SetInfoText(inventoryText, 5);
+        StartCoroutine(showInformation);
     }
 
    private IEnumerator SetInfoText(List<string> lines, int iterations = 1)

@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class EnterTheGameZone : MonoBehaviour
 {
-    [SerializeField] private string gameName;
+    [SerializeField][Range(1, 4)] private int gameNumber = 1;
 
     
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.name == "OVRPlayerController")
         {
-            SceneManager.LoadScene(gameName);
+            string gameScene = string.Format("Game0{0}", gameNumber);
+
+            GlobalData.SharedInstance.NextSpawnPoint = gameNumber;
+
+            SceneManager.LoadScene(gameScene);
         }
     }
 }
