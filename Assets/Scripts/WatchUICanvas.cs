@@ -44,7 +44,7 @@ public class WatchUICanvas : MonoBehaviour
 
         string line = string.Format("Tu puntuación total es: {0}",GlobalData.SharedInstance.TotalScore);
         scoreText.Add(line);
-        line = string.Format("La máxima puntuación alcanzada es: {0}", 9999);
+        line = string.Format("La máxima puntuación alcanzada es: {0}", PlayerPrefs.GetInt("MaxScore"));
         scoreText.Add(line);
         line= "";
         scoreText.Add(line);

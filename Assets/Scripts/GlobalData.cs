@@ -6,7 +6,7 @@ public class GlobalData : MonoBehaviour
 {
     private int totalScore = 0;   
     
-    private int nextSpawnPoint = 0;//Punto de inicio del player
+    private int nextSpawnPoint = 0;//Punto de salida del player
 
     public static GlobalData SharedInstance;
 
@@ -22,6 +22,12 @@ public class GlobalData : MonoBehaviour
         {
             SharedInstance = this;
             DontDestroyOnLoad(gameObject);
+        }
+
+
+        if(!PlayerPrefs.HasKey("MaxScore"))
+        {
+            PlayerPrefs.SetInt("MaxScore", 0);
         }
     }    
 }

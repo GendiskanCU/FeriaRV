@@ -45,8 +45,20 @@ public class GameManager : MonoBehaviour
 
         GlobalData.SharedInstance.TotalScore += score;
 
-        gameInfoCanvas.ShowAMessage(string.Format("JUEGO FINALIZADO. Has sumado {0} puntos y en total tienes {1} puntos",
-         score, GlobalData.SharedInstance.TotalScore));       
+        
+
+        if(GlobalData.SharedInstance.TotalScore > PlayerPrefs.GetInt("MaxScore"))       
+        {
+            PlayerPrefs.SetInt("MaxScore", GlobalData.SharedInstance.TotalScore);
+
+            gameInfoCanvas.ShowAMessage(string.Format("FIN JUEGO. Sumas {0} puntos a un total de RECORD de {1} puntos",
+         score, GlobalData.SharedInstance.TotalScore));
+        }
+        else
+        {
+            gameInfoCanvas.ShowAMessage(string.Format("JUEGO FINALIZADO. Has sumado {0} puntos y en total tienes {1} puntos",
+         score, GlobalData.SharedInstance.TotalScore));
+        }
 
         OnGameEnds.Invoke();
         
