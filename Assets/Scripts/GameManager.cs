@@ -9,9 +9,16 @@ public class GameManager : MonoBehaviour
     [SerializeField][Range(15, 1200)] private int timeForGame01 = 45;
     [SerializeField][Range(3, 100)] private int attemptsForGame01 = 5;
 
+    [SerializeField][Range(15, 1200)] private int timeForGame02 = 45;
+    [SerializeField][Range(3, 100)] private int attemptsForGame02 = 5;
+    [SerializeField][Range(-0.05f, -9.81f)] private float gravityForGame02 = -9.81f;
+    [SerializeField][Range(0.01f, 2.0f)] private float bouncingForGame02 = 2.0f;
+
     [SerializeField] GameInfoCanvas gameInfoCanvas;
 
     public UnityEvent OnGameEnds;
+    
+    private float originalGravityGame02, originalBouncingGame02;
 
     private int score = 0;
     private int totalTime = 0;
@@ -25,13 +32,22 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        ballGun = GameObject.Find("BallGun").GetComponent<Shoot>();
-
         switch(SceneManager.GetActiveScene().name)
         {
             case "Game01":
+                ballGun = GameObject.Find("BallGun").GetComponent<Shoot>();
+
                 totalTime = timeForGame01;                
                 totalAttempts = attemptsForGame01;                
+            break;
+
+            case "Game02":
+                originalGravityGame02 = Physics.gravity.y;
+                //Debug.LogError(string.Format("Gravedad original: {0}", originalGravityGame02));
+                originalBouncingGame02 = Physics.bounceThreshold;
+                //Debug.LogError(string.Format("Rebote original: {0}", originalBouncingGame02));
+                totalTime = timeForGame02;                
+                totalAttempts = attemptsForGame02;                
             break;
         }
     }    
@@ -39,13 +55,22 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         gameInProgress = false;
-        ballGun.CanShoot = false;        
+
+        switch(SceneManager.GetActiveScene().name)
+        {
+            case "Game01":
+                ballGun.CanShoot = false;                
+            break;
+
+            case "Game02":
+                Physics.gravity = new Vector3(0, originalGravityGame02, 0);
+                Physics.bounceThreshold = originalBouncingGame02;
+            break;
+        }                
 
         StopCoroutine(TimerGame());
 
-        GlobalData.SharedInstance.TotalScore += score;
-
-        
+        GlobalData.SharedInstance.TotalScore += score;        
 
         if(GlobalData.SharedInstance.TotalScore > PlayerPrefs.GetInt("MaxScore"))       
         {
@@ -98,7 +123,18 @@ public class GameManager : MonoBehaviour
         gameInfoCanvas.ShowAttemptsText(remainingAttempts.ToString("00"));        
         gameInfoCanvas.ShowScoreText(score.ToString("000"));
 
-        ballGun.CanShoot = true;
+        switch(SceneManager.GetActiveScene().name)
+        {
+            case "Game01":
+                ballGun.CanShoot = true;                
+            break;
+
+            case "Game02":
+                Physics.gravity = new Vector3(0, gravityForGame02, 0);
+                Physics.bounceThreshold = bouncingForGame02;
+            break;
+        }
+        
         gameInProgress = true;
 
         StartCoroutine(TimerGame());
