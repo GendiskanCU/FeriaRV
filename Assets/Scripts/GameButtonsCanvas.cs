@@ -40,8 +40,7 @@ public class GameButtonsCanvas : MonoBehaviour
 
                 case "StartButton": 
                     Lock();
-                    gameInfoCanvas.ShowAMessage("El juego está en marcha... ¡SUERTE!");                   
-                    GameObject.Find("GameBoard").GetComponent<GameBoard>().GameBegins();
+                    gameInfoCanvas.ShowAMessage("El juego está en marcha... ¡SUERTE!");                    
                     
                     GameObject.Find("InstructionsButton").GetComponent<GameButtonsCanvas>().Unlock();
                     GameObject.Find("ExitButton").GetComponent<GameButtonsCanvas>().Lock();

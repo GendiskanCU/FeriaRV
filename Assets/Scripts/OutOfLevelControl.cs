@@ -23,6 +23,7 @@ public class OutOfLevelControl : MonoBehaviour
 
     private IEnumerator ReloadingScene()
     {        
+        GlobalData.SharedInstance.NextSpawnPoint = 0;
         yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(scene.name);
     }

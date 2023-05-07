@@ -18,9 +18,9 @@ public class PlayerSpawnPoint : MonoBehaviour
         int nextSpawnPoint = GlobalData.SharedInstance.NextSpawnPoint;
         if(spawnsPoints.Length > 0 && (nextSpawnPoint >= 0 && nextSpawnPoint < spawnsPoints.Length ))
         {
-            Debug.LogError(string.Format("({0}-{1}-{2})",spawnsPoints[nextSpawnPoint].transform.position.x, spawnsPoints[nextSpawnPoint].transform.position.y, spawnsPoints[nextSpawnPoint].transform.position.z));
-            transform.localPosition = spawnsPoints[nextSpawnPoint].transform.position;
-            transform.localRotation = spawnsPoints[nextSpawnPoint].transform.rotation;
+            //Debug.LogError(string.Format("({0}-{1}-{2})",spawnsPoints[nextSpawnPoint].transform.position.x, spawnsPoints[nextSpawnPoint].transform.position.y, spawnsPoints[nextSpawnPoint].transform.position.z));
+            transform.position = spawnsPoints[nextSpawnPoint].transform.position;
+            transform.rotation = spawnsPoints[nextSpawnPoint].transform.rotation;
         }
     }
 

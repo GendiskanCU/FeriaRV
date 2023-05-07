@@ -604,10 +604,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeForGame01: 45
   attemptsForGame01: 15
-  timeForGame02: 180
-  attemptsForGame02: 5
-  gravityForGame02: -9.81
-  bouncingForGame02: 2
+  timeForGame02: 15
+  gravityForGame02: -1.23
+  bouncingForGame02: 0.29
   gameInfoCanvas: {fileID: 64967118}
   OnGameEnds:
     m_PersistentCalls:

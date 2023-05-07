@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField][Range(3, 100)] private int attemptsForGame01 = 5;
 
     [SerializeField][Range(15, 1200)] private int timeForGame02 = 45;
-    [SerializeField][Range(3, 100)] private int attemptsForGame02 = 5;
+    
     [SerializeField][Range(-0.05f, -9.81f)] private float gravityForGame02 = -9.81f;
     [SerializeField][Range(0.01f, 2.0f)] private float bouncingForGame02 = 2.0f;
 
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
                 originalBouncingGame02 = Physics.bounceThreshold;
                 //Debug.LogError(string.Format("Rebote original: {0}", originalBouncingGame02));
                 totalTime = timeForGame02;                
-                totalAttempts = attemptsForGame02;                
+                               
             break;
         }
     }    
@@ -126,10 +126,12 @@ public class GameManager : MonoBehaviour
         switch(SceneManager.GetActiveScene().name)
         {
             case "Game01":
-                ballGun.CanShoot = true;                
+                ballGun.CanShoot = true;
+                GameObject.Find("GameBoard").GetComponent<GameBoard>().GameBegins();                
             break;
 
             case "Game02":
+                gameInfoCanvas.ShowAttemptsText("---");
                 Physics.gravity = new Vector3(0, gravityForGame02, 0);
                 Physics.bounceThreshold = bouncingForGame02;
             break;

@@ -8,7 +8,8 @@ public class EnterTheGameZone : MonoBehaviour
     [SerializeField][Range(1, 4)] private int gameNumber = 1;
 
     
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other) {        
+
         if(other.gameObject.name == "OVRPlayerController")
         {
             string gameScene = string.Format("Game0{0}", gameNumber);
