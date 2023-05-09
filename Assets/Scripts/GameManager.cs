@@ -46,8 +46,7 @@ public class GameManager : MonoBehaviour
                 //Debug.LogError(string.Format("Gravedad original: {0}", originalGravityGame02));
                 originalBouncingGame02 = Physics.bounceThreshold;
                 //Debug.LogError(string.Format("Rebote original: {0}", originalBouncingGame02));
-                totalTime = timeForGame02;                
-                               
+                totalTime = timeForGame02;                               
             break;
         }
     }    

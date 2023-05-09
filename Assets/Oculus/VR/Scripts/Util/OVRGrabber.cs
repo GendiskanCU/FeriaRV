@@ -81,6 +81,12 @@ public class OVRGrabber : MonoBehaviour
 	protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
 	protected bool m_operatingWithoutOVRCameraRig = true;
 
+    //Variables añadidas por el usuario
+    //Incremento de velocidad al soltar el balón de basket
+    [SerializeField]
+    [Tooltip("Al soltar el balón de baloncesto la velocidad de impulso se verá multiplicada por este valor")]
+    private float velocityIncrementForBasketball = 2.0f;
+
     /// <summary>
     /// The currently grabbed object.
     /// </summary>
@@ -359,7 +365,7 @@ public class OVRGrabber : MonoBehaviour
 			OVRPose trackingSpace = transform.ToOVRPose() * localPose.Inverse();
 			Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(m_controller);
 			Vector3 angularVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerAngularVelocity(m_controller);
-
+            
             GrabbableRelease(linearVelocity, angularVelocity);
         }
 
@@ -369,6 +375,11 @@ public class OVRGrabber : MonoBehaviour
 
     protected void GrabbableRelease(Vector3 linearVelocity, Vector3 angularVelocity)
     {
+        if(m_grabbedObj.gameObject.CompareTag("Basketball") ) //Añadido por el usuario para incrementar velocidad balón baloncesto al soltar
+            {
+                linearVelocity *= velocityIncrementForBasketball;
+                angularVelocity *= velocityIncrementForBasketball;
+            }
         m_grabbedObj.GrabEnd(linearVelocity, angularVelocity);
         if(m_parentHeldObject) m_grabbedObj.transform.parent = null;
         m_grabbedObj = null;
