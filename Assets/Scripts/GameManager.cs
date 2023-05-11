@@ -142,9 +142,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void IncreaseScore(int increment)
-    {       
-        score += increment;
-        gameInfoCanvas.ShowScoreText(score.ToString("000"));        
+    {   
+        if(gameInProgress)
+        {
+            score += increment;
+            gameInfoCanvas.ShowScoreText(score.ToString("000"));
+        }                
     }
 
     public void DecreaseAttempts(int decrecement)

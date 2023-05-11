@@ -11,6 +11,8 @@ TagManager:
   - PlayerHand
   - BonusZone
   - Basketball
+  - GameGround
+  - InvisibleGround
   layers:
   - Default
   - TransparentFX

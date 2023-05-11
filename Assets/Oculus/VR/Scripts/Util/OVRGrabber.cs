@@ -378,7 +378,7 @@ public class OVRGrabber : MonoBehaviour
         if(m_grabbedObj.gameObject.CompareTag("Basketball") ) //Añadido por el usuario para incrementar velocidad balón baloncesto al soltar
             {
                 linearVelocity *= velocityIncrementForBasketball;
-                angularVelocity *= velocityIncrementForBasketball;
+                angularVelocity *= velocityIncrementForBasketball;                
             }
         m_grabbedObj.GrabEnd(linearVelocity, angularVelocity);
         if(m_parentHeldObject) m_grabbedObj.transform.parent = null;

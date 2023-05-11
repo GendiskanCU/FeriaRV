@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1790247002061625396}
   - component: {fileID: 1607024514}
   - component: {fileID: 1607024515}
-  - component: {fileID: 1607024516}
+  - component: {fileID: 6702219216795113197}
   m_Layer: 0
   m_Name: basketBall
   m_TagString: Basketball
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transformForLeftHand: {fileID: 5251962433631282994, guid: 9a0022e6affe53041a750315ef4b18eb, type: 3}
   transformForRightHand: {fileID: 5251962433631282994, guid: 9c1424f064250024a87e382cbfc3ddaa, type: 3}
---- !u!114 &1607024516
+--- !u!114 &6702219216795113197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,6 +157,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6287725581813791801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d662add8cbb5141b5283f73bd67762, type: 3}
+  m_Script: {fileID: 11500000, guid: 810e851698d54f94fa5c859d5a6161a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
