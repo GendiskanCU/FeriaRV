@@ -8,6 +8,9 @@ public class ControlBallPosition : MonoBehaviour
 {
     private Vector3 initialPosition;
     private Rigidbody _rigidbody;
+    private MeshRenderer _mesh;
+
+    [SerializeField] private GameManager gameManager;
     
     [SerializeField] private int secondsUntilReturn = 5;
 
@@ -16,6 +19,13 @@ public class ControlBallPosition : MonoBehaviour
     {
         initialPosition = transform.position;
         _rigidbody = GetComponent<Rigidbody>();
+        _mesh = GetComponent<MeshRenderer>();
+
+        
+        gameManager.OnGameStart.AddListener(ShowBall);
+        gameManager.OnGameEnds.AddListener(HideBall);
+
+        HideBall();
     }
 
     private void OnCollisionEnter(Collision other) {
@@ -30,10 +40,23 @@ public class ControlBallPosition : MonoBehaviour
 
     private void ReturnToInitialPosition()
     {
+        //Debug.LogError("Colocando balones en su posición inicial");
         gameObject.SetActive(false);
         _rigidbody.isKinematic = true;
         transform.position = initialPosition;
         _rigidbody.isKinematic = false;
         gameObject.SetActive(true);
+    }
+
+    private void ShowBall()
+    {
+        ReturnToInitialPosition();
+        _mesh.enabled = true;
+    }
+
+    private void HideBall()
+    {
+        _mesh.enabled = false;
+        //_rigidbody.isKinematic = true;
     }
 }

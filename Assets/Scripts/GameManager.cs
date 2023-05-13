@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameInfoCanvas gameInfoCanvas;
 
+    public UnityEvent OnGameStart;
     public UnityEvent OnGameEnds;
     
     private float originalGravityGame02, originalBouncingGame02;
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour
 
             case "Game02":
                 Physics.gravity = new Vector3(0, originalGravityGame02, 0);
-                Physics.bounceThreshold = originalBouncingGame02;
+                Physics.bounceThreshold = originalBouncingGame02;                
             break;
         }                
 
@@ -132,13 +133,15 @@ public class GameManager : MonoBehaviour
             case "Game02":
                 gameInfoCanvas.ShowAttemptsText("---");
                 Physics.gravity = new Vector3(0, gravityForGame02, 0);
-                Physics.bounceThreshold = bouncingForGame02;
+                Physics.bounceThreshold = bouncingForGame02;                
             break;
         }
         
         gameInProgress = true;
 
         StartCoroutine(TimerGame());
+
+        OnGameStart.Invoke();
     }
 
     public void IncreaseScore(int increment)

@@ -13,6 +13,7 @@ TagManager:
   - Basketball
   - GameGround
   - InvisibleGround
+  - BasketballBlue
   layers:
   - Default
   - TransparentFX

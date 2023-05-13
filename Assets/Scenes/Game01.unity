@@ -1283,7 +1283,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeForGame01: 45
   attemptsForGame01: 15
+  timeForGame02: 45
+  gravityForGame02: -9.81
+  bouncingForGame02: 2
   gameInfoCanvas: {fileID: 64967118}
+  OnGameStart:
+    m_PersistentCalls:
+      m_Calls: []
   OnGameEnds:
     m_PersistentCalls:
       m_Calls:
@@ -8730,6 +8736,10 @@ PrefabInstance:
     - target: {fileID: 1930251640349978687, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
       propertyPath: m_Name
       value: GamePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930251641004569862, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c11d5b4c6c469649aba6d678d384d2e, type: 3}

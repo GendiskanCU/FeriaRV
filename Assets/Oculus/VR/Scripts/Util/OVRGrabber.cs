@@ -376,10 +376,16 @@ public class OVRGrabber : MonoBehaviour
     protected void GrabbableRelease(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         if(m_grabbedObj.gameObject.CompareTag("Basketball") ) //Añadido por el usuario para incrementar velocidad balón baloncesto al soltar
-            {
-                linearVelocity *= velocityIncrementForBasketball;
-                angularVelocity *= velocityIncrementForBasketball;                
-            }
+        {
+            linearVelocity *= velocityIncrementForBasketball;
+            angularVelocity *= velocityIncrementForBasketball;                
+        }
+        if(m_grabbedObj.gameObject.CompareTag("BasketballBlue") ) //Añadido por el usuario para incrementar velocidad balón baloncesto al soltar
+        {
+            linearVelocity *= (velocityIncrementForBasketball / 1.5f);
+            angularVelocity *= (velocityIncrementForBasketball / 1.5f);                
+        }
+
         m_grabbedObj.GrabEnd(linearVelocity, angularVelocity);
         if(m_parentHeldObject) m_grabbedObj.transform.parent = null;
         m_grabbedObj = null;

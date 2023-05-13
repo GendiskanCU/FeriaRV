@@ -147,6 +147,60 @@
 	{
 		"Id": "Game01",
 		"Line": "El juego termina si agotas los intentos o si el tiempo llega a cero."
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "¡Bienvenido/a al juego de basket!. Cuando pulses el botón de comienzo"
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "tendrás un tiempo límite para encestar en la canasta el mayor número"
+	},
+	
+	{
+		"Id": "Game02",
+		"Line": "de balones que puedas. Estos balones aparecerán encima de cada banqueta."
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "Puedes lanzarlos cuantas veces quieras hasta que finalice el tiempo."
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "No te preocupes de recuperar los balones lanzados. Pasados unos segundos"
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "nuestros ayudantes mágicos los volverán a colocar encima de las banquetas."
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "Por cada balón naranja que encestes conseguirás 5 puntos, pero si encentas un"		
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "balón de color azul, ¡valdrá 10 puntos!... Eso sí, recuerda que"		
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "siempre tendrás que mantener una distancia mínima a la canasta, la cual"
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "está delimitada por el área azul del suelo, en la que no podrás entrar."
+	},
+
+	{
+		"Id": "Game02",
+		"Line": "¡Mucha suerte, y a por ello!"
 	}
-		
 ]
