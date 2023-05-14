@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class WaterMovement : MonoBehaviour
 {
-    [SerializeField] private float minPosZ = 0.00845f;
+    [SerializeField] private float minPosZ = 0.00780f;
     [SerializeField] private float maxPosZ = 0.00855f;
 
-    [SerializeField] private int movementSpeed = 8;
+    [SerializeField] private float movementSpeed = 0.001f;
 
     private float initialCorrection = 0.00002f;
-    private int temporayVariation = 1;
+    private int temporalVariation = 1;
 
     
     // Start is called before the first frame update
@@ -30,16 +30,16 @@ public class WaterMovement : MonoBehaviour
     private void MoveWater()
     {        
         
-        transform.Translate(Vector3.up * (Time.fixedDeltaTime / movementSpeed) * temporayVariation, Space.World);
+        transform.Translate(Vector3.up * (Time.fixedDeltaTime * movementSpeed) * temporalVariation, Space.World);
         
         float currentPositionZ = transform.localPosition.z;
         if(currentPositionZ >= maxPosZ)
         {
-            temporayVariation = -1;
+            temporalVariation = -1;
         }
         if(currentPositionZ <= minPosZ)
         {
-            temporayVariation = 1;
+            temporalVariation = 1;
         }
     }
 }
