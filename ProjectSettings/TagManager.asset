@@ -14,6 +14,7 @@ TagManager:
   - GameGround
   - InvisibleGround
   - BasketballBlue
+  - Duck
   layers:
   - Default
   - TransparentFX
