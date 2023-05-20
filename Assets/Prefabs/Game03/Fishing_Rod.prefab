@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4cc820e53d976439469ee753c5208a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capturePoint: {x: -0.5, y: -2.9, z: 0}
+  capturedRotation: {x: -90, y: 90, z: 0}
+  massIncrement: 0.3
 --- !u!1 &2373430285506958367
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 2373430285506958367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.6048062, y: 1.7477962, z: 1.0893493}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 3.663763, y: 3.663763, z: 3.663763}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5598733887010196256}
@@ -316,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118ce6efec293f74591b22c889d5b9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformForLeftHand: {fileID: 8079398186799504961, guid: 018b5471fc5aa3d40a9c050667867c87, type: 3}
+  transformForLeftHand: {fileID: 8079398186799504961, guid: d01483bd57181584181cbf89d98e84d0, type: 3}
   transformForRightHand: {fileID: 8079398186799504961, guid: 018b5471fc5aa3d40a9c050667867c87, type: 3}
 --- !u!1 &5390686620624870991
 GameObject:
