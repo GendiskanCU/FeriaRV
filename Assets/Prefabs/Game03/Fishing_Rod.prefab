@@ -123,7 +123,7 @@ SpringJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781399693}
-  m_ConnectedBody: {fileID: 925564591}
+  m_ConnectedBody: {fileID: 0}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_AutoConfigureConnectedAnchor: 1
@@ -166,11 +166,6 @@ GameObject:
   - component: {fileID: 3151339866822512293}
   - component: {fileID: 2023265758514282752}
   - component: {fileID: 4319200760922666442}
-  - component: {fileID: 925564591}
-  - component: {fileID: 925564595}
-  - component: {fileID: 4596962541597757889}
-  - component: {fileID: 2043057480379405489}
-  - component: {fileID: 1461714827}
   m_Layer: 0
   m_Name: Fishing_Rod
   m_TagString: Untagged
@@ -248,79 +243,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &925564591
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2373430285506958367}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &925564595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2373430285506958367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d662add8cbb5141b5283f73bd67762, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &4596962541597757889
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2373430285506958367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.019680832, y: 0.019000052, z: 0.63445675}
-  m_Center: {x: -0.00034039142, y: 0, z: 0.1712637}
---- !u!114 &2043057480379405489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2373430285506958367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 1
-  m_snapOrientation: 1
-  m_snapOffset: {fileID: 0}
-  m_grabPoints:
-  - {fileID: 6982255815822387432}
---- !u!114 &1461714827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2373430285506958367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 118ce6efec293f74591b22c889d5b9cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformForLeftHand: {fileID: 8079398186799504961, guid: d01483bd57181584181cbf89d98e84d0, type: 3}
-  transformForRightHand: {fileID: 8079398186799504961, guid: 018b5471fc5aa3d40a9c050667867c87, type: 3}
 --- !u!1 &5390686620624870991
 GameObject:
   m_ObjectHideFlags: 0
