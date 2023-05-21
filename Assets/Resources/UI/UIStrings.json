@@ -202,5 +202,45 @@
 	{
 		"Id": "Game02",
 		"Line": "¡Mucha suerte, y a por ello!"
+	},
+
+	{
+		"Id": "Game03",
+		"Line": "Cuando comience el juego aparecerá una piscina... ¡llena de patos!."
+	},
+
+	{
+		"Id": "Game03",
+		"Line": "Coge la caña de pescar e intentar capturar todos los que puedas antes de"
+	},
+
+	{
+		"Id": "Game03",
+		"Line": "que termine el tiempo límite."
+	},
+
+	{
+		"Id": "Game03",
+		"Line": "Acerca el anzuelo a uno de los patos para pescarlo, y después"
+	},
+
+	{
+		"Id": "Game03",
+		"Line": "acércalo hasta el pozo. Cuando metas a cada pato dentro del pozo"
+	},
+
+	{
+		"Id": "Game03",
+		"Line": "obtendrás 2 puntos y podrás dirigirte a por otro pato más."
+	},
+
+	{
+		"Id": "Game03",
+		"Line": "Si capturas a todos los patos de la piscina tendrás 10 puntos extra."
+	},
+
+	{
+		"Id": "Game03",
+		"Line": "¡Buena pesca!"
 	}
 ]

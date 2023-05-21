@@ -14,12 +14,18 @@ public class GameManager : MonoBehaviour
     [SerializeField][Range(-0.05f, -9.81f)] private float gravityForGame02 = -9.81f;
     [SerializeField][Range(0.01f, 2.0f)] private float bouncingForGame02 = 2.0f;
 
+    [SerializeField][Range(15, 1200)] private int timeForGame03 = 30;
+    [SerializeField]private int numberOfDucksGame03 = 15;
+    [SerializeField]private int bonusTotalPoolGame03 = 10;
+
     [SerializeField] GameInfoCanvas gameInfoCanvas;
 
     public UnityEvent OnGameStart;
     public UnityEvent OnGameEnds;
     
     private float originalGravityGame02, originalBouncingGame02;
+
+    private int ducks;
 
     private int score = 0;
     private int totalTime = 0;
@@ -48,6 +54,10 @@ public class GameManager : MonoBehaviour
                 originalBouncingGame02 = Physics.bounceThreshold;
                 //Debug.LogError(string.Format("Rebote original: {0}", originalBouncingGame02));
                 totalTime = timeForGame02;                               
+            break;
+
+            case "Game03":
+                totalTime = timeForGame03;                
             break;
         }
     }    
@@ -135,6 +145,11 @@ public class GameManager : MonoBehaviour
                 Physics.gravity = new Vector3(0, gravityForGame02, 0);
                 Physics.bounceThreshold = bouncingForGame02;                
             break;
+
+            case "Game03":
+                gameInfoCanvas.ShowAttemptsText("---");
+                ducks = numberOfDucksGame03;
+            break;
         }
         
         gameInProgress = true;
@@ -165,5 +180,15 @@ public class GameManager : MonoBehaviour
                 EndGame();
             }
         }        
+    }
+
+    public void DecreaseDucksInPoolGame03()
+    {
+        ducks--;
+        if(ducks <= 0)
+        {
+            IncreaseScore(bonusTotalPoolGame03);
+            EndGame();
+        }
     }
 }
