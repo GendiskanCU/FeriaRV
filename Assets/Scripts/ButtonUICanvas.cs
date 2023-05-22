@@ -6,9 +6,17 @@ public class ButtonUICanvas : MonoBehaviour
 {
     [SerializeField] private WatchUICanvas watchUICanvas;
 
+    private AudioSource _audioSource;
+
+    private void Start() {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("DedoIndice"))
         {
+            _audioSource.PlayOneShot(_audioSource.clip);
+
             switch(gameObject.name)
             {
                 case "ButtonQuitApp":

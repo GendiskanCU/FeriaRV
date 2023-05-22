@@ -293,6 +293,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 432980688}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!114 &64967118 stripped
@@ -642,6 +646,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 432980688}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1001 &280529694
@@ -929,6 +937,9 @@ MonoBehaviour:
   timeForGame02: 180
   gravityForGame02: -8
   bouncingForGame02: 0.45
+  timeForGame03: 30
+  numberOfDucksGame03: 15
+  bonusTotalPoolGame03: 10
   gameInfoCanvas: {fileID: 64967118}
   OnGameStart:
     m_PersistentCalls:
@@ -1504,6 +1515,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 432980688}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1 &606968544
@@ -1880,6 +1895,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 432980688}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1001 &737107728
@@ -2987,6 +3006,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 432980688}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1 &1059203610
@@ -4188,6 +4211,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 432980688}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!4 &1300333970 stripped
@@ -4626,6 +4653,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 432980688}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1 &1459918247
@@ -6072,6 +6103,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 432980688}
+    - target: {fileID: 1037020595827060896, guid: dcf175983c1ad4545b1347e5221c8936, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
     - target: {fileID: 1111968906198794446, guid: dcf175983c1ad4545b1347e5221c8936, type: 3}
       propertyPath: m_RootOrder
       value: 1

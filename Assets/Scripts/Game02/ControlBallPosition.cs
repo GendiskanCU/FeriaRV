@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class ControlBallPosition : MonoBehaviour
 {
+    [SerializeField] private AudioClip ReturnToMainSound;
+
+    private AudioSource _audioSource;
+
     private Vector3 initialPosition;
     private Rigidbody _rigidbody;
     private MeshRenderer _mesh;
@@ -17,6 +21,8 @@ public class ControlBallPosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
+
         initialPosition = transform.position;
         _rigidbody = GetComponent<Rigidbody>();
         _mesh = GetComponent<MeshRenderer>();
@@ -44,8 +50,9 @@ public class ControlBallPosition : MonoBehaviour
         gameObject.SetActive(false);
         _rigidbody.isKinematic = true;
         transform.position = initialPosition;
-        _rigidbody.isKinematic = false;
+        _rigidbody.isKinematic = false;        
         gameObject.SetActive(true);
+        _audioSource.PlayOneShot(ReturnToMainSound);
     }
 
     private void ShowBall()
