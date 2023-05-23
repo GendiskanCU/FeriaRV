@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3715118205235113957}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Basketball
+  m_TagString: BasketballBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298734529314691700}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.658, y: 1.2374951, z: -6.064}
   m_LocalScale: {x: 1.15, y: 1.15, z: 1.15}
   m_ConstrainProportionsScale: 0
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 591574320a9fedf469b84eca75c03dbe, type: 2}
+  - {fileID: 2100000, guid: 993cec3e25163a4449f7a77292474270, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810e851698d54f94fa5c859d5a6161a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ReturnToMainSound: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
   gameManager: {fileID: 0}
   secondsUntilReturn: 5
 --- !u!82 &3715118205235113957

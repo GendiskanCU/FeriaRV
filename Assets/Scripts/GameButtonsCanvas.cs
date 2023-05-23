@@ -17,6 +17,8 @@ public class GameButtonsCanvas : MonoBehaviour
     private Vector3 unlockedPosition;
 
     private GameManager gameManager;
+
+    private AudioSource _audioSource;
     
 
     private void Start() {
@@ -25,6 +27,8 @@ public class GameButtonsCanvas : MonoBehaviour
         _meshRenderer.material = materialUnlocked;        
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        _audioSource = GetComponent<AudioSource>();
     }
     
     private void OnTriggerEnter(Collider other) {        
@@ -57,7 +61,9 @@ public class GameButtonsCanvas : MonoBehaviour
                     /*gameInfoCanvas.ShowAMessage("SALIR DEL JUEGO");
                     gameInfoCanvas.ShowExitMessage();*/                                                               
                 break;
-            }                                 
+            }
+
+            _audioSource.PlayOneShot(_audioSource.clip);                                 
         }            
     } 
 

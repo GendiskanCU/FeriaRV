@@ -20,6 +20,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameInfoCanvas gameInfoCanvas;
 
+    [SerializeField] private AudioClip melodyGame01, melodyGame02, melodyGame03;
+    [SerializeField] private AudioClip startGameAudioClip, endGameAudioClip,
+            increaseScoreAudioClip, bonusScoreAudioClip, newRecordAudioclip;
+
+
     public UnityEvent OnGameStart;
     public UnityEvent OnGameEnds;
     
@@ -36,16 +41,22 @@ public class GameManager : MonoBehaviour
     private bool gameInProgress = false;
 
     private Shoot ballGun;
+
+    private AudioSource _audioSource;
     
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
+
         switch(SceneManager.GetActiveScene().name)
         {
             case "Game01":
                 ballGun = GameObject.Find("BallGun").GetComponent<Shoot>();
 
                 totalTime = timeForGame01;                
-                totalAttempts = attemptsForGame01;                
+                totalAttempts = attemptsForGame01;
+
+                _audioSource.clip = melodyGame01;                
             break;
 
             case "Game02":
@@ -54,10 +65,14 @@ public class GameManager : MonoBehaviour
                 originalBouncingGame02 = Physics.bounceThreshold;
                 //Debug.LogError(string.Format("Rebote original: {0}", originalBouncingGame02));
                 totalTime = timeForGame02;                               
+
+                _audioSource.clip = melodyGame02;
             break;
 
             case "Game03":
-                totalTime = timeForGame03;                
+                totalTime = timeForGame03;
+
+                _audioSource.clip = melodyGame03;                
             break;
         }
     }    
@@ -88,12 +103,16 @@ public class GameManager : MonoBehaviour
 
             gameInfoCanvas.ShowAMessage(string.Format("FIN JUEGO. Sumas {0} puntos a un total de RECORD de {1} puntos",
          score, GlobalData.SharedInstance.TotalScore));
+          _audioSource.PlayOneShot(newRecordAudioclip);
         }
         else
         {
             gameInfoCanvas.ShowAMessage(string.Format("JUEGO FINALIZADO. Has sumado {0} puntos y en total tienes {1} puntos",
          score, GlobalData.SharedInstance.TotalScore));
         }
+
+        _audioSource.Stop();
+         _audioSource.PlayOneShot(endGameAudioClip);
 
         OnGameEnds.Invoke();
         
@@ -156,6 +175,9 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(TimerGame());
 
+        _audioSource.Play();
+         _audioSource.PlayOneShot(startGameAudioClip);
+
         OnGameStart.Invoke();
     }
 
@@ -165,6 +187,8 @@ public class GameManager : MonoBehaviour
         {
             score += increment;
             gameInfoCanvas.ShowScoreText(score.ToString("000"));
+
+            _audioSource.PlayOneShot(increaseScoreAudioClip);
         }                
     }
 
@@ -188,6 +212,7 @@ public class GameManager : MonoBehaviour
         if(ducks <= 0)
         {
             IncreaseScore(bonusTotalPoolGame03);
+             _audioSource.PlayOneShot(bonusScoreAudioClip);
             EndGame();
         }
     }

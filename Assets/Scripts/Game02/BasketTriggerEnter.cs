@@ -7,11 +7,11 @@ public class BasketTriggerEnter : MonoBehaviour
     [SerializeField] private int redBallPoints = 5;
     [SerializeField] private int blueBallPoints = 10;
     
-    private GameManager gameManager;    
+    [SerializeField] private GameManager gameManager;    
 
 
     private void Start() {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();        
+                
     }
     
 
