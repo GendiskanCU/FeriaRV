@@ -12,12 +12,16 @@ public class GameBoard : MonoBehaviour
     [SerializeField] private float standbyTimeForNewBoard = 3.0f;
     [SerializeField] private int extraBonus = 3;
 
+    [SerializeField] private AudioClip mountingNewBoarAudio;
+
     private bool gameBoardCreated;
 
     private int rollsInTable;
     private BonusZone bonusZone;
 
     private GameManager gameManager;
+
+    private AudioSource _audioSource;
 
 
     private void Awake() {
@@ -27,6 +31,7 @@ public class GameBoard : MonoBehaviour
 
     private void Start() {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _audioSource = GetComponent<AudioSource>();
     }
     
     public void GameBegins()
@@ -63,6 +68,9 @@ public class GameBoard : MonoBehaviour
     private void RestoreBoard()
     {
         rollsInTable = rolls.Count;
+
+        _audioSource.PlayOneShot(mountingNewBoarAudio);
+
         for(int pos = 0; pos < rolls.Count; pos++)
         {
             rolls[pos].transform.rotation = spawnPoint.rotation;
@@ -122,7 +130,7 @@ public class GameBoard : MonoBehaviour
 
     private IEnumerator PlacingNewBoard()
     {
-        gameManager.IncreaseScore(extraBonus);
+        gameManager.IncreaseScore(extraBonus, true);
         yield return new WaitForSeconds(standbyTimeForNewBoard);        
         RestoreBoard();
     }

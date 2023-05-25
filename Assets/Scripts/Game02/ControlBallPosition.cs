@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ControlBallPosition : MonoBehaviour
 {
-    [SerializeField] private AudioClip ReturnToMainSound;
+    [SerializeField] private AudioClip ReturnToMainSound, groundCollisionSound, ringCollisionSound, tableCollisionSound;
 
     private AudioSource _audioSource;
 
@@ -37,7 +37,16 @@ public class ControlBallPosition : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("InvisibleGround") || other.gameObject.CompareTag("GameGround"))
         {
+            _audioSource.PlayOneShot(groundCollisionSound);
             Invoke("ReturnToInitialPosition", secondsUntilReturn);
+        }
+        else if(other.gameObject.CompareTag("BasketRing"))
+        {
+            _audioSource.PlayOneShot(ringCollisionSound);
+        }
+        else if(other.gameObject.CompareTag("BasketTable"))
+        {
+            _audioSource.PlayOneShot(tableCollisionSound);
         }
          
     }

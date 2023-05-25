@@ -14,9 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField][Range(-0.05f, -9.81f)] private float gravityForGame02 = -9.81f;
     [SerializeField][Range(0.01f, 2.0f)] private float bouncingForGame02 = 2.0f;
 
-    [SerializeField][Range(15, 1200)] private int timeForGame03 = 30;
-    [SerializeField]private int numberOfDucksGame03 = 15;
-    [SerializeField]private int bonusTotalPoolGame03 = 10;
+    [SerializeField][Range(15, 1200)] private int timeForGame03 = 30;        
 
     [SerializeField] GameInfoCanvas gameInfoCanvas;
 
@@ -30,7 +28,7 @@ public class GameManager : MonoBehaviour
     
     private float originalGravityGame02, originalBouncingGame02;
 
-    private int ducks;
+    
 
     private int score = 0;
     private int totalTime = 0;
@@ -46,6 +44,8 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
+        
+        //PlayerPrefs.DeleteAll();
         _audioSource = GetComponent<AudioSource>();
 
         switch(SceneManager.GetActiveScene().name)
@@ -54,9 +54,7 @@ public class GameManager : MonoBehaviour
                 ballGun = GameObject.Find("BallGun").GetComponent<Shoot>();
 
                 totalTime = timeForGame01;                
-                totalAttempts = attemptsForGame01;
-
-                _audioSource.clip = melodyGame01;                
+                totalAttempts = attemptsForGame01;                                
             break;
 
             case "Game02":
@@ -64,21 +62,19 @@ public class GameManager : MonoBehaviour
                 //Debug.LogError(string.Format("Gravedad original: {0}", originalGravityGame02));
                 originalBouncingGame02 = Physics.bounceThreshold;
                 //Debug.LogError(string.Format("Rebote original: {0}", originalBouncingGame02));
-                totalTime = timeForGame02;                               
-
-                _audioSource.clip = melodyGame02;
+                totalTime = timeForGame02;                
             break;
 
             case "Game03":
-                totalTime = timeForGame03;
-
-                _audioSource.clip = melodyGame03;                
+                totalTime = timeForGame03;                                
             break;
         }
     }    
 
-    private void EndGame()
+    public void EndGame()
     {
+        _audioSource.Stop();
+
         gameInProgress = false;
 
         switch(SceneManager.GetActiveScene().name)
@@ -102,8 +98,10 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("MaxScore", GlobalData.SharedInstance.TotalScore);
 
             gameInfoCanvas.ShowAMessage(string.Format("FIN JUEGO. Sumas {0} puntos a un total de RECORD de {1} puntos",
-         score, GlobalData.SharedInstance.TotalScore));
-          _audioSource.PlayOneShot(newRecordAudioclip);
+            score, GlobalData.SharedInstance.TotalScore));
+            _audioSource.clip = newRecordAudioclip;
+            _audioSource.loop = false;
+            _audioSource.Play();
         }
         else
         {
@@ -111,7 +109,7 @@ public class GameManager : MonoBehaviour
          score, GlobalData.SharedInstance.TotalScore));
         }
 
-        _audioSource.Stop();
+        
          _audioSource.PlayOneShot(endGameAudioClip);
 
         OnGameEnds.Invoke();
@@ -156,18 +154,23 @@ public class GameManager : MonoBehaviour
         {
             case "Game01":
                 ballGun.CanShoot = true;
-                GameObject.Find("GameBoard").GetComponent<GameBoard>().GameBegins();                
+                GameObject.Find("GameBoard").GetComponent<GameBoard>().GameBegins();     
+
+                _audioSource.clip = melodyGame01;           
             break;
 
             case "Game02":
                 gameInfoCanvas.ShowAttemptsText("---");
                 Physics.gravity = new Vector3(0, gravityForGame02, 0);
-                Physics.bounceThreshold = bouncingForGame02;                
+                Physics.bounceThreshold = bouncingForGame02;     
+
+                _audioSource.clip = melodyGame02;           
             break;
 
             case "Game03":
-                gameInfoCanvas.ShowAttemptsText("---");
-                ducks = numberOfDucksGame03;
+                gameInfoCanvas.ShowAttemptsText("---");                
+
+                _audioSource.clip = melodyGame03;
             break;
         }
         
@@ -175,20 +178,24 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(TimerGame());
 
+        _audioSource.loop = true;
         _audioSource.Play();
-         _audioSource.PlayOneShot(startGameAudioClip);
+        _audioSource.PlayOneShot(startGameAudioClip);
 
         OnGameStart.Invoke();
     }
 
-    public void IncreaseScore(int increment)
+    public void IncreaseScore(int increment, bool isBonus = false)
     {   
         if(gameInProgress)
         {
             score += increment;
             gameInfoCanvas.ShowScoreText(score.ToString("000"));
 
-            _audioSource.PlayOneShot(increaseScoreAudioClip);
+            if(!isBonus)
+                _audioSource.PlayOneShot(increaseScoreAudioClip);
+            else
+                _audioSource.PlayOneShot(bonusScoreAudioClip);
         }                
     }
 
@@ -206,14 +213,5 @@ public class GameManager : MonoBehaviour
         }        
     }
 
-    public void DecreaseDucksInPoolGame03()
-    {
-        ducks--;
-        if(ducks <= 0)
-        {
-            IncreaseScore(bonusTotalPoolGame03);
-             _audioSource.PlayOneShot(bonusScoreAudioClip);
-            EndGame();
-        }
-    }
+   
 }

@@ -233,6 +233,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1642431902}
     m_Modifications:
+    - target: {fileID: 2543997206223857238, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5495096789281938924, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -297,6 +301,22 @@ PrefabInstance:
       propertyPath: ReturnToMainSound
       value: 
       objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ringCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8455392f561aa4286d43a7a470a84a, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: otherCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: tableCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d89592c188d79c4f8dde911a4285551, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!114 &64967118 stripped
@@ -578,6 +598,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1642431902}
     m_Modifications:
+    - target: {fileID: 2543997206223857238, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5495096789281938924, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -650,6 +674,22 @@ PrefabInstance:
       propertyPath: ReturnToMainSound
       value: 
       objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ringCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8455392f561aa4286d43a7a470a84a, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: otherCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: tableCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d89592c188d79c4f8dde911a4285551, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1001 &280529694
@@ -938,8 +978,6 @@ MonoBehaviour:
   gravityForGame02: -8
   bouncingForGame02: 0.45
   timeForGame03: 30
-  numberOfDucksGame03: 15
-  bonusTotalPoolGame03: 10
   gameInfoCanvas: {fileID: 64967118}
   melodyGame01: {fileID: 0}
   melodyGame02: {fileID: 0}
@@ -1515,18 +1553,6 @@ PrefabInstance:
       propertyPath: OnGameEnds.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 419760862}
-    - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
-      propertyPath: OnGameEnds.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Unlock
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
-      propertyPath: OnGameEnds.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Unlock
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
-      propertyPath: OnGameEnds.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Unlock
-      objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322364, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1551,6 +1577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1642431902}
     m_Modifications:
+    - target: {fileID: 2543997206223857238, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5495096789281938924, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1623,6 +1653,22 @@ PrefabInstance:
       propertyPath: ReturnToMainSound
       value: 
       objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ringCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8455392f561aa4286d43a7a470a84a, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: otherCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: tableCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d89592c188d79c4f8dde911a4285551, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1 &606968544
@@ -1939,6 +1985,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1642431902}
     m_Modifications:
+    - target: {fileID: 2543997206223857238, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5495096789281938924, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2003,6 +2053,22 @@ PrefabInstance:
       propertyPath: ReturnToMainSound
       value: 
       objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ringCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8455392f561aa4286d43a7a470a84a, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: otherCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: tableCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d89592c188d79c4f8dde911a4285551, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1001 &737107728
@@ -2552,6 +2618,14 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 595111081}
+    - target: {fileID: 1830113865, guid: f7e9ff9e062102d408c8722164f5e7f8, type: 3}
+      propertyPath: m_TagString
+      value: BasketTable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077029777096028146, guid: f7e9ff9e062102d408c8722164f5e7f8, type: 3}
+      propertyPath: m_TagString
+      value: BasketRing
+      objectReference: {fileID: 0}
     - target: {fileID: 2782387094217704360, guid: f7e9ff9e062102d408c8722164f5e7f8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2596,9 +2670,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3316983872831996217, guid: f7e9ff9e062102d408c8722164f5e7f8, type: 3}
+      propertyPath: m_TagString
+      value: BasketTable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564405869260328569, guid: f7e9ff9e062102d408c8722164f5e7f8, type: 3}
+      propertyPath: m_TagString
+      value: BasketRing
+      objectReference: {fileID: 0}
     - target: {fileID: 9089331271120583293, guid: f7e9ff9e062102d408c8722164f5e7f8, type: 3}
       propertyPath: m_Name
       value: CanastaBasket
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089331271120583293, guid: f7e9ff9e062102d408c8722164f5e7f8, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7e9ff9e062102d408c8722164f5e7f8, type: 3}
@@ -3054,6 +3140,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1642431902}
     m_Modifications:
+    - target: {fileID: 2543997206223857238, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5495096789281938924, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3118,6 +3208,22 @@ PrefabInstance:
       propertyPath: ReturnToMainSound
       value: 
       objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ringCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8455392f561aa4286d43a7a470a84a, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: otherCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: tableCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d89592c188d79c4f8dde911a4285551, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1 &1059203610
@@ -4259,6 +4365,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1642431902}
     m_Modifications:
+    - target: {fileID: 2543997206223857238, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5495096789281938924, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -4323,6 +4433,22 @@ PrefabInstance:
       propertyPath: ReturnToMainSound
       value: 
       objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ringCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8455392f561aa4286d43a7a470a84a, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: otherCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: tableCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d89592c188d79c4f8dde911a4285551, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!4 &1300333970 stripped
@@ -4681,6 +4807,134 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394839094}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1403428799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403428801}
+  - component: {fileID: 1403428800}
+  m_Layer: 0
+  m_Name: AmbientSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1403428800
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403428799}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cfd4d98946eb4584a805eff0a3569177, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1403428801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403428799}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1408426273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4354773947600555495, guid: 457eaea6b68016a468eb5ec540cd97e2, type: 3}
@@ -4693,6 +4947,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1642431902}
     m_Modifications:
+    - target: {fileID: 2543997206223857238, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5495096789281938924, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -4765,6 +5023,22 @@ PrefabInstance:
       propertyPath: ReturnToMainSound
       value: 
       objectReference: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: ringCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8455392f561aa4286d43a7a470a84a, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: otherCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: tableCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 6702219216795113197, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d89592c188d79c4f8dde911a4285551, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477e51b89eb92c84fb315407b9559910, type: 3}
 --- !u!1 &1459918247
@@ -6207,6 +6481,22 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 595111081}
+    - target: {fileID: 1037020595827060896, guid: dcf175983c1ad4545b1347e5221c8936, type: 3}
+      propertyPath: ringCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8455392f561aa4286d43a7a470a84a, type: 3}
+    - target: {fileID: 1037020595827060896, guid: dcf175983c1ad4545b1347e5221c8936, type: 3}
+      propertyPath: otherCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 1037020595827060896, guid: dcf175983c1ad4545b1347e5221c8936, type: 3}
+      propertyPath: tableCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57a1790d0cb3f7f418ea978476367c21, type: 3}
+    - target: {fileID: 1037020595827060896, guid: dcf175983c1ad4545b1347e5221c8936, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d89592c188d79c4f8dde911a4285551, type: 3}
     - target: {fileID: 1111968906198794446, guid: dcf175983c1ad4545b1347e5221c8936, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6249,6 +6539,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1111968906198794446, guid: dcf175983c1ad4545b1347e5221c8936, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715118205235113957, guid: dcf175983c1ad4545b1347e5221c8936, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

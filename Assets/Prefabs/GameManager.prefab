@@ -45,14 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d727da5b7adfdb45935f2c62668fa09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForGame01: 45
-  attemptsForGame01: 15
+  timeForGame01: 90
+  attemptsForGame01: 25
   timeForGame02: 180
   gravityForGame02: -8
   bouncingForGame02: 0.45
-  timeForGame03: 90
-  numberOfDucksGame03: 15
-  bonusTotalPoolGame03: 10
+  timeForGame03: 120
   gameInfoCanvas: {fileID: 0}
   melodyGame01: {fileID: 8300000, guid: 698341a2e482aaa49974a24f99deb275, type: 3}
   melodyGame02: {fileID: 8300000, guid: eacafe502a719744583e3481d83bd408, type: 3}
@@ -60,7 +58,7 @@ MonoBehaviour:
   startGameAudioClip: {fileID: 8300000, guid: 9bfb461ba11a6fa4ea939e76ba33943c, type: 3}
   endGameAudioClip: {fileID: 8300000, guid: 699daf183775f3c4cb957abdd034f8da, type: 3}
   increaseScoreAudioClip: {fileID: 8300000, guid: f202dd59d1fb13e4bbf72ff27f4f0610, type: 3}
-  bonusScoreAudioClip: {fileID: 8300000, guid: 16cc4fb7328496e4a89d496e4800d847, type: 3}
+  bonusScoreAudioClip: {fileID: 8300000, guid: 65e787e7a170e9e46b26da925043025b, type: 3}
   newRecordAudioclip: {fileID: 8300000, guid: 00958a1724994074fb78631ae2b8e643, type: 3}
   OnGameStart:
     m_PersistentCalls:

@@ -11,7 +11,10 @@ public class HookController : MonoBehaviour
 
     [SerializeField] private GameManager gameManager;
 
+    [SerializeField] private AudioClip duckCaughtAudio;
+
     private Rigidbody _rigidbody;
+    private AudioSource _audioSource;
 
     private bool capturedDuck;
     private bool allowFishing;
@@ -20,6 +23,7 @@ public class HookController : MonoBehaviour
         fishingCollectionPoint.DuckCaught.AddListener(DuckReleased);
 
         _rigidbody = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
 
         gameManager.OnGameStart.AddListener(AllowsFishing);
         gameManager.OnGameEnds.AddListener(PreventsFishing);
@@ -29,6 +33,8 @@ public class HookController : MonoBehaviour
         if(allowFishing && !capturedDuck && other.gameObject.CompareTag("Duck"))
         {            
             capturedDuck = true;
+
+            _audioSource.PlayOneShot(duckCaughtAudio);
             
             other.gameObject.GetComponent<DuckMovement>().enabled = false;
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;

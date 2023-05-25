@@ -24,7 +24,7 @@ public class BasketTriggerEnter : MonoBehaviour
         if(other.CompareTag("BasketballBlue"))
         {
             //Llamada a método de GameManager para aumentar la puntuación
-            gameManager.IncreaseScore(blueBallPoints);            
+            gameManager.IncreaseScore(blueBallPoints, true);            
         }        
     }
 }

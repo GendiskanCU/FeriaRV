@@ -6,19 +6,19 @@ public class ControlCollision : MonoBehaviour
 {
      [SerializeField] private float forceMagnitude = 2.5f;
 
-     [SerializeField] private GameObject collisionEffect;     
+     [SerializeField] private GameObject collisionEffect;
+     
 
-     private Rigidbody _rb;
+     private Rigidbody _rb;     
 
      private GameManager gameManager;
 
     
     void Start()
     {
-        _rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();       
 
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();        
     }
 
     private void OnTriggerEnter(Collider other) {
