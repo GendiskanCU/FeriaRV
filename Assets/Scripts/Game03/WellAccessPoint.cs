@@ -10,7 +10,7 @@ public class WellAccessPoint : MonoBehaviour
     [SerializeField]private int numberOfDucksGame03 = 15;
     [SerializeField] private GameManager gameManager;
 
-    [SerializeField] private AudioClip duckInWellAudio;
+    [SerializeField] private AudioClip duckInWellAudio;    
 
     public UnityEvent DuckCaught;
 
@@ -24,7 +24,8 @@ public class WellAccessPoint : MonoBehaviour
     private void Start() {
         splashEffect = transform.GetComponentInChildren<ParticleSystem>();
         _audioSource = GetComponent<AudioSource>();
-        ducks = numberOfDucksGame03;
+        
+        gameManager.OnGameStart.AddListener(SetDucksInCurrentPool);
     }
 
    private void OnTriggerEnter(Collider other) {
@@ -54,5 +55,10 @@ public class WellAccessPoint : MonoBehaviour
         {
             gameManager.IncreaseScore(duckScore);
         }
+    }
+
+    private void SetDucksInCurrentPool()
+    {
+        ducks = numberOfDucksGame03;
     }
 }

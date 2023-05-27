@@ -242,5 +242,45 @@
 	{
 		"Id": "Game03",
 		"Line": "¡Buena pesca!"
+	},
+
+	{
+		"Id": "Game04",
+		"Line": "¡¡Bienvenido/a al Cuela-Bolas!!. Cuando el juego dé comienzo, dispondrás"
+	},
+
+	{
+		"Id": "Game04",
+		"Line": "de un tiempo límite para lanzar e intentar colar las seis bolas de colores"
+	},
+
+	{
+		"Id": "Game04",
+		"Line": " en los agujeros del tablero. Cada agujero tiene una puntuación distinta"
+	},
+
+	{
+		"Id": "Game04",
+		"Line": "según su dificultad. Si no aciertas en ningún agujero las bolas seguirán estando"
+	},
+
+	{
+		"Id": "Game04",
+		"Line": "disponibles para ser lanzadas mientras reste tiempo, pero si entran en un agujero"
+	},
+
+	{
+		"Id": "Game04",
+		"Line": "o en la parte inferior del tablero se quedarán allí y no podrás volver a lanzarla."
+	},
+
+	{
+		"Id": "Game04",
+		"Line": "El juego finaliza al agotarse el tiempo, o si ya no quedan bolas para lanzar."
+	},
+
+	{
+		"Id": "Game04",
+		"Line": "¡Ánimo, a ver qué tal tu puntería!"
 	}
 ]

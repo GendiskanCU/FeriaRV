@@ -65,6 +65,10 @@ public class ControlBallPosition : MonoBehaviour
         {
             _audioSource.PlayOneShot(tableCollisionSound);
         }
+        else
+        {
+            _audioSource.PlayOneShot(groundCollisionSound);
+        }
          
     }
   

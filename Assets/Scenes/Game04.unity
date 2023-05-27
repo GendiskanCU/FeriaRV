@@ -1009,12 +1009,16 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
+      propertyPath: endGameAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e3f2a32db5d0bc34cb14f07f0c34313e, type: 3}
+    - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: gravityForGame04
-      value: -7
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: bouncingForGame04
-      value: 0.6
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: OnGameEnds.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1932,6 +1936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  ballLostSound: {fileID: 0}
 --- !u!65 &1014338988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2992,18 +2997,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8215579273833961241, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 8215579273833961241, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 8215579273833961241, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 8215579273833961241, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.22
       objectReference: {fileID: 0}
@@ -3047,6 +3040,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 595111081}
+    - target: {fileID: 8490135858229299472, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8984997529195865681, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
       propertyPath: gameManager
       value: 
@@ -4211,9 +4208,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 595111081}
     - target: {fileID: 299060504785482611, guid: e584de5754bd330439ff951745ce12e3, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 42693f14566fb5b4cba157579693f0e7, type: 3}
+    - target: {fileID: 299060504785482611, guid: e584de5754bd330439ff951745ce12e3, type: 3}
       propertyPath: secondsUntilReturn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 299060504785482611, guid: e584de5754bd330439ff951745ce12e3, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3347a96d0e3c67443a23d0172f97d4ad, type: 3}
     - target: {fileID: 299060504785482611, guid: e584de5754bd330439ff951745ce12e3, type: 3}
       propertyPath: ReturnPositionForBallsGame04.x
       value: 1.298
@@ -4373,9 +4378,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 595111081}
     - target: {fileID: 3500083007923090316, guid: dca3479470780714393ad6d3da70dd03, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 42693f14566fb5b4cba157579693f0e7, type: 3}
+    - target: {fileID: 3500083007923090316, guid: dca3479470780714393ad6d3da70dd03, type: 3}
       propertyPath: secondsUntilReturn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3500083007923090316, guid: dca3479470780714393ad6d3da70dd03, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3347a96d0e3c67443a23d0172f97d4ad, type: 3}
     - target: {fileID: 3500083007923090316, guid: dca3479470780714393ad6d3da70dd03, type: 3}
       propertyPath: ReturnPositionForBallsGame04.x
       value: 1.298
@@ -4522,9 +4535,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 595111081}
     - target: {fileID: 3767089562460326058, guid: 90b5eb992b351fd4788cd52021f5e2eb, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 42693f14566fb5b4cba157579693f0e7, type: 3}
+    - target: {fileID: 3767089562460326058, guid: 90b5eb992b351fd4788cd52021f5e2eb, type: 3}
       propertyPath: secondsUntilReturn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3767089562460326058, guid: 90b5eb992b351fd4788cd52021f5e2eb, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3347a96d0e3c67443a23d0172f97d4ad, type: 3}
     - target: {fileID: 3767089562460326058, guid: 90b5eb992b351fd4788cd52021f5e2eb, type: 3}
       propertyPath: ReturnPositionForBallsGame04.x
       value: 1.298
@@ -4555,9 +4576,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 595111081}
     - target: {fileID: 7265049121681554837, guid: 5cd8d5a2e30d15647b7c13b8e6af144a, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 42693f14566fb5b4cba157579693f0e7, type: 3}
+    - target: {fileID: 7265049121681554837, guid: 5cd8d5a2e30d15647b7c13b8e6af144a, type: 3}
       propertyPath: secondsUntilReturn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7265049121681554837, guid: 5cd8d5a2e30d15647b7c13b8e6af144a, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3347a96d0e3c67443a23d0172f97d4ad, type: 3}
     - target: {fileID: 7265049121681554837, guid: 5cd8d5a2e30d15647b7c13b8e6af144a, type: 3}
       propertyPath: ReturnPositionForBallsGame04.x
       value: 1.298
@@ -4708,9 +4737,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 595111081}
     - target: {fileID: 8092918923954099907, guid: 23b46f186b0d54341a871aaa28082f8c, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 42693f14566fb5b4cba157579693f0e7, type: 3}
+    - target: {fileID: 8092918923954099907, guid: 23b46f186b0d54341a871aaa28082f8c, type: 3}
       propertyPath: secondsUntilReturn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8092918923954099907, guid: 23b46f186b0d54341a871aaa28082f8c, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3347a96d0e3c67443a23d0172f97d4ad, type: 3}
     - target: {fileID: 8092918923954099907, guid: 23b46f186b0d54341a871aaa28082f8c, type: 3}
       propertyPath: ReturnPositionForBallsGame04.x
       value: 1.298
@@ -4741,9 +4778,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 595111081}
     - target: {fileID: 8635446288345123562, guid: 898c9823dbd70ea4ab0244830ee88bd9, type: 3}
+      propertyPath: ReturnToMainSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 42693f14566fb5b4cba157579693f0e7, type: 3}
+    - target: {fileID: 8635446288345123562, guid: 898c9823dbd70ea4ab0244830ee88bd9, type: 3}
       propertyPath: secondsUntilReturn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8635446288345123562, guid: 898c9823dbd70ea4ab0244830ee88bd9, type: 3}
+      propertyPath: groundCollisionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3347a96d0e3c67443a23d0172f97d4ad, type: 3}
     - target: {fileID: 8635446288345123562, guid: 898c9823dbd70ea4ab0244830ee88bd9, type: 3}
       propertyPath: ReturnPositionForBallsGame04.x
       value: 1.298

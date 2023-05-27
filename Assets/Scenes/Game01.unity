@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d662add8cbb5141b5283f73bd67762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReturnToMainSound: {fileID: 8300000, guid: 5c69e7857ff9f104bb21a393b0d7165c, type: 3}
+  ReturnToMainSound: {fileID: 8300000, guid: 42693f14566fb5b4cba157579693f0e7, type: 3}
 --- !u!114 &239753254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,6 +1158,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 64967118}
     - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
+      propertyPath: endGameAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e3f2a32db5d0bc34cb14f07f0c34313e, type: 3}
+    - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: OnGameEnds.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 669639951}
@@ -1461,10 +1465,15 @@ MonoBehaviour:
   gravityForGame02: -9.81
   bouncingForGame02: 2
   timeForGame03: 30
+  gravityForGame04: -9.81
+  bouncingForGame04: 2
+  timeForGame04: 30
+  attempsForGame04: 6
   gameInfoCanvas: {fileID: 64967118}
   melodyGame01: {fileID: 0}
   melodyGame02: {fileID: 0}
   melodyGame03: {fileID: 0}
+  melodyGame04: {fileID: 0}
   startGameAudioClip: {fileID: 0}
   endGameAudioClip: {fileID: 0}
   increaseScoreAudioClip: {fileID: 0}
