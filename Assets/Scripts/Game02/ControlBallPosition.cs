@@ -18,7 +18,9 @@ public class ControlBallPosition : MonoBehaviour
     
     [SerializeField] private int secondsUntilReturn = 5;
 
-    private Vector3 ReturnPositionForBallGame04 = new Vector3(2.588f, 0.889f, -1.181303f);
+    [SerializeField] private Vector3 ReturnPositionForBallsGame04 = new Vector3(1.29900002f,1.04700005f,-1.44200003f);
+
+    private bool isGoingToInitialPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,7 @@ public class ControlBallPosition : MonoBehaviour
 
         if(gameObject.CompareTag("BallGame04"))
         {
-            initialPosition = ReturnPositionForBallGame04;
+            initialPosition = ReturnPositionForBallsGame04;
         }
         else
         {
@@ -48,7 +50,12 @@ public class ControlBallPosition : MonoBehaviour
         if(other.gameObject.CompareTag("InvisibleGround") || other.gameObject.CompareTag("GameGround"))
         {
             _audioSource.PlayOneShot(groundCollisionSound);
-            Invoke("ReturnToInitialPosition", secondsUntilReturn);
+            if(!isGoingToInitialPosition)
+            {
+                isGoingToInitialPosition = true;
+                Invoke("ReturnToInitialPosition", secondsUntilReturn);
+            }
+            
         }
         else if(other.gameObject.CompareTag("BasketRing"))
         {
@@ -71,6 +78,8 @@ public class ControlBallPosition : MonoBehaviour
         _rigidbody.isKinematic = false;        
         gameObject.SetActive(true);
         _audioSource.PlayOneShot(ReturnToMainSound);
+        
+        isGoingToInitialPosition = false;
     }
 
     private void ShowBall()

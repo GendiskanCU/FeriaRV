@@ -978,10 +978,15 @@ MonoBehaviour:
   gravityForGame02: -8
   bouncingForGame02: 0.45
   timeForGame03: 30
+  gravityForGame04: -9.81
+  bouncingForGame04: 2
+  timeForGame04: 30
+  attempsForGame04: 6
   gameInfoCanvas: {fileID: 64967118}
   melodyGame01: {fileID: 0}
   melodyGame02: {fileID: 0}
   melodyGame03: {fileID: 0}
+  melodyGame04: {fileID: 0}
   startGameAudioClip: {fileID: 0}
   endGameAudioClip: {fileID: 0}
   increaseScoreAudioClip: {fileID: 0}
@@ -1499,7 +1504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322338, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.93
+      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322338, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1507,7 +1512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322338, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.75
+      value: 5.09
       objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322338, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: m_LocalRotation.w

@@ -6,13 +6,18 @@ public class BallsGame04 : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
     private List<Vector3> ballPosition = new List<Vector3>();
-    // Start is called before the first frame update
+
+    private List<GameObject> ballsInGame04 = new List<GameObject>();
+    
+    
     void Start()
     {
         gameManager.OnGameStart.AddListener(GoToStartPosition);        
 
         foreach(Transform ball in transform)
         {
+            Debug.LogError(string.Format("PosX: {0}, PosY: {1}, PosZ: {2}", ball.position.x, ball.position.y, ball.position.z));
+            ballsInGame04.Add(ball.gameObject);
             ballPosition.Add(ball.position);
         }
     }
@@ -20,10 +25,11 @@ public class BallsGame04 : MonoBehaviour
     private void GoToStartPosition()
     {
         int counter = 0;
-        foreach(Transform ball in transform)
+        foreach(GameObject ball in ballsInGame04)
         {
             ball.gameObject.SetActive(false);
-            ball.position = ballPosition[counter];
+            Debug.LogError(string.Format("PosX: {0}, PosY: {1}, PosZ: {2}", ballPosition[counter].x, ballPosition[counter].y, ballPosition[counter].z));
+            ball.transform.position = ballPosition[counter];
             ball.gameObject.SetActive(true);
             counter++;
         }
