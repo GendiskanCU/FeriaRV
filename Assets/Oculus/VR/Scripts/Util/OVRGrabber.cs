@@ -87,6 +87,10 @@ public class OVRGrabber : MonoBehaviour
     [Tooltip("Al soltar el balón de baloncesto la velocidad de impulso se verá multiplicada por este valor")]
     private float velocityIncrementForBasketball = 2.0f;
 
+    [SerializeField]
+    [Tooltip("Al soltar las bolas del cuarto juego la velocidad de impulso se verá multiplicada por este valor")]
+    private float velocityIncrementForBallGame04 = 2.0f;
+
     /// <summary>
     /// The currently grabbed object.
     /// </summary>
@@ -384,6 +388,11 @@ public class OVRGrabber : MonoBehaviour
         {
             linearVelocity *= (velocityIncrementForBasketball / 1.5f);
             angularVelocity *= (velocityIncrementForBasketball / 1.5f);                
+        }
+        if(m_grabbedObj.gameObject.CompareTag("BallGame04") ) //Añadido por el usuario para incrementar velocidad de las bolas del Game04
+        {
+            linearVelocity *= velocityIncrementForBallGame04;
+            angularVelocity *= velocityIncrementForBallGame04;                
         }
 
         m_grabbedObj.GrabEnd(linearVelocity, angularVelocity);

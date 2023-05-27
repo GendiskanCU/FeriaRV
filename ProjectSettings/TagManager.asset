@@ -17,6 +17,8 @@ TagManager:
   - Duck
   - BasketTable
   - BasketRing
+  - BallGame04
+  - BallBowler
   layers:
   - Default
   - TransparentFX

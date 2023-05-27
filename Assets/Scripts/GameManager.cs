@@ -14,11 +14,17 @@ public class GameManager : MonoBehaviour
     [SerializeField][Range(-0.05f, -9.81f)] private float gravityForGame02 = -9.81f;
     [SerializeField][Range(0.01f, 2.0f)] private float bouncingForGame02 = 2.0f;
 
-    [SerializeField][Range(15, 1200)] private int timeForGame03 = 30;        
+    [SerializeField][Range(15, 1200)] private int timeForGame03 = 30;     
+
+     [SerializeField][Range(-0.05f, -9.81f)] private float gravityForGame04 = -9.81f;
+    [SerializeField][Range(0.01f, 2.0f)] private float bouncingForGame04 = 2.0f;   
+
+    [SerializeField][Range(15, 1200)] private int timeForGame04 = 30;
+    [SerializeField][Range(1, 10)] private int attempsForGame04 = 6;
 
     [SerializeField] GameInfoCanvas gameInfoCanvas;
 
-    [SerializeField] private AudioClip melodyGame01, melodyGame02, melodyGame03;
+    [SerializeField] private AudioClip melodyGame01, melodyGame02, melodyGame03, melodyGame04;
     [SerializeField] private AudioClip startGameAudioClip, endGameAudioClip,
             increaseScoreAudioClip, bonusScoreAudioClip, newRecordAudioclip;
 
@@ -26,7 +32,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnGameStart;
     public UnityEvent OnGameEnds;
     
-    private float originalGravityGame02, originalBouncingGame02;
+    private float originalGravityGame02, originalBouncingGame02, originalGravityGame04, originalBouncingGame04;
 
     
 
@@ -68,6 +74,14 @@ public class GameManager : MonoBehaviour
             case "Game03":
                 totalTime = timeForGame03;                                
             break;
+
+            case "Game04":
+                originalGravityGame04 = Physics.gravity.y;                
+                originalBouncingGame04 = Physics.bounceThreshold;
+                totalAttempts = attempsForGame04;
+                totalTime = timeForGame04;                
+            break;
+
         }
     }    
 
@@ -86,6 +100,10 @@ public class GameManager : MonoBehaviour
             case "Game02":
                 Physics.gravity = new Vector3(0, originalGravityGame02, 0);
                 Physics.bounceThreshold = originalBouncingGame02;                
+            break;
+            case "Game04":
+                Physics.gravity = new Vector3(0, originalGravityGame04, 0);
+                Physics.bounceThreshold = originalBouncingGame04;                
             break;
         }                
 
@@ -171,6 +189,13 @@ public class GameManager : MonoBehaviour
                 gameInfoCanvas.ShowAttemptsText("---");                
 
                 _audioSource.clip = melodyGame03;
+            break;
+
+            case "Game04":                
+                Physics.gravity = new Vector3(0, gravityForGame04, 0);
+                Physics.bounceThreshold = bouncingForGame04;
+
+                _audioSource.clip = melodyGame04;
             break;
         }
         

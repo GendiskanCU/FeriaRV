@@ -18,12 +18,22 @@ public class ControlBallPosition : MonoBehaviour
     
     [SerializeField] private int secondsUntilReturn = 5;
 
+    private Vector3 ReturnPositionForBallGame04 = new Vector3(2.588f, 0.889f, -1.181303f);
+
     // Start is called before the first frame update
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
 
-        initialPosition = transform.position;
+        if(gameObject.CompareTag("BallGame04"))
+        {
+            initialPosition = ReturnPositionForBallGame04;
+        }
+        else
+        {
+            initialPosition = transform.position;
+        }
+        
         _rigidbody = GetComponent<Rigidbody>();
         _mesh = GetComponent<MeshRenderer>();
 
@@ -54,8 +64,7 @@ public class ControlBallPosition : MonoBehaviour
 
 
     private void ReturnToInitialPosition()
-    {
-        //Debug.LogError("Colocando balones en su posición inicial");
+    {        
         gameObject.SetActive(false);
         _rigidbody.isKinematic = true;
         transform.position = initialPosition;
@@ -66,13 +75,16 @@ public class ControlBallPosition : MonoBehaviour
 
     private void ShowBall()
     {
-        ReturnToInitialPosition();
+        if(!gameObject.CompareTag("BallGame04"))
+        {            
+            ReturnToInitialPosition();
+        }
+            
         _mesh.enabled = true;
     }
 
     private void HideBall()
     {
-        _mesh.enabled = false;
-        //_rigidbody.isKinematic = true;
+        _mesh.enabled = false;        
     }
 }
