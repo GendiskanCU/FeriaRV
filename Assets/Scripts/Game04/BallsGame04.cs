@@ -16,7 +16,7 @@ public class BallsGame04 : MonoBehaviour
 
         foreach(Transform ball in transform)
         {
-            Debug.LogError(string.Format("PosX: {0}, PosY: {1}, PosZ: {2}", ball.position.x, ball.position.y, ball.position.z));
+            //Debug.LogError(string.Format("PosX: {0}, PosY: {1}, PosZ: {2}", ball.position.x, ball.position.y, ball.position.z));
             ballsInGame04.Add(ball.gameObject);
             ballPosition.Add(ball.position);
         }
@@ -28,7 +28,7 @@ public class BallsGame04 : MonoBehaviour
         foreach(GameObject ball in ballsInGame04)
         {
             ball.gameObject.SetActive(false);
-            Debug.LogError(string.Format("PosX: {0}, PosY: {1}, PosZ: {2}", ballPosition[counter].x, ballPosition[counter].y, ballPosition[counter].z));
+            //Debug.LogError(string.Format("PosX: {0}, PosY: {1}, PosZ: {2}", ballPosition[counter].x, ballPosition[counter].y, ballPosition[counter].z));
             ball.transform.position = ballPosition[counter];
             ball.gameObject.SetActive(true);
             counter++;
