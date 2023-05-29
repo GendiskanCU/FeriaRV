@@ -1014,11 +1014,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: e3f2a32db5d0bc34cb14f07f0c34313e, type: 3}
     - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: gravityForGame04
-      value: -7
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: bouncingForGame04
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3162081583776322339, guid: 01508e27619f04041bedfd31fcdfbf82, type: 3}
       propertyPath: OnGameEnds.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2976,6 +2976,26 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 595111081}
+    - target: {fileID: 1324257408, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 595111081}
+    - target: {fileID: 1324257409, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 595111081}
+    - target: {fileID: 1324257410, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 595111081}
+    - target: {fileID: 1324257411, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 595111081}
+    - target: {fileID: 1324257412, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 595111081}
     - target: {fileID: 626663223455051717, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
       propertyPath: gameManager
       value: 
@@ -3044,10 +3064,6 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 595111081}
-    - target: {fileID: 8490135858229299472, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8984997529195865681, guid: d9ba57df54d00fe43a57143edec01d33, type: 3}
       propertyPath: gameManager
       value: 
@@ -4245,7 +4261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299060504785482611, guid: e584de5754bd330439ff951745ce12e3, type: 3}
       propertyPath: ReturnPositionForBallsGame04.y
-      value: 1.302
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 299060504785482611, guid: e584de5754bd330439ff951745ce12e3, type: 3}
       propertyPath: ReturnPositionForBallsGame04.z
@@ -4431,7 +4447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500083007923090316, guid: dca3479470780714393ad6d3da70dd03, type: 3}
       propertyPath: ReturnPositionForBallsGame04.y
-      value: 1.302
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 3500083007923090316, guid: dca3479470780714393ad6d3da70dd03, type: 3}
       propertyPath: ReturnPositionForBallsGame04.z
@@ -4604,7 +4620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3767089562460326058, guid: 90b5eb992b351fd4788cd52021f5e2eb, type: 3}
       propertyPath: ReturnPositionForBallsGame04.y
-      value: 1.302
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 3767089562460326058, guid: 90b5eb992b351fd4788cd52021f5e2eb, type: 3}
       propertyPath: ReturnPositionForBallsGame04.z
@@ -4661,7 +4677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7265049121681554837, guid: 5cd8d5a2e30d15647b7c13b8e6af144a, type: 3}
       propertyPath: ReturnPositionForBallsGame04.y
-      value: 1.302
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 7265049121681554837, guid: 5cd8d5a2e30d15647b7c13b8e6af144a, type: 3}
       propertyPath: ReturnPositionForBallsGame04.z
@@ -4838,7 +4854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8092918923954099907, guid: 23b46f186b0d54341a871aaa28082f8c, type: 3}
       propertyPath: ReturnPositionForBallsGame04.y
-      value: 1.302
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 8092918923954099907, guid: 23b46f186b0d54341a871aaa28082f8c, type: 3}
       propertyPath: ReturnPositionForBallsGame04.z
@@ -4879,7 +4895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8635446288345123562, guid: 898c9823dbd70ea4ab0244830ee88bd9, type: 3}
       propertyPath: ReturnPositionForBallsGame04.y
-      value: 1.302
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 8635446288345123562, guid: 898c9823dbd70ea4ab0244830ee88bd9, type: 3}
       propertyPath: ReturnPositionForBallsGame04.z
